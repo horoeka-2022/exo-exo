@@ -1,27 +1,10 @@
 import React, { Suspense, useRef } from 'react'
 import { Routes, Route } from 'react-router-dom'
 
-import { Canvas, useFrame, useLoader } from '@react-three/fiber'
+import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Stars } from '@react-three/drei'
 import { Physics } from '@react-three/cannon'
-import { TextureLoader } from 'three/src/loaders/TextureLoader'
-import EarthMap from '../../server/public/RS3_EarthC.webp'
-
-function Sphere() {
-  const colorMap = useLoader(TextureLoader, EarthMap)
-  const earthRef = useRef()
-
-  useFrame(({ clock }) => {
-    const elapsedTime = clock.getElapsedTime()
-    earthRef.current.rotation.y = elapsedTime / 6
-  })
-  return (
-    <mesh ref={earthRef}>
-      <sphereGeometry />
-      <meshStandardMaterial map={colorMap} />
-    </mesh>
-  )
-}
+import Earth from './Earth'
 
 function App() {
   return (
@@ -32,7 +15,7 @@ function App() {
         <ambientLight intensity={0.5} />
         <spotLight position={[10, 15, 10]} angle={0.3} />
         <Physics>
-          <Sphere />
+          <Earth />
         </Physics>
       </Suspense>
     </Canvas>
