@@ -5,6 +5,7 @@ import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Stars } from '@react-three/drei'
 import { Physics } from '@react-three/cannon'
 import Earth from './Earth'
+import Kepler from './Kepler22b'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <spotLight position={[10, 15, 10]} angle={0.3} />
         <Physics>
           <Earth />
+          <Kepler />
         </Physics>
       </Suspense>
     </Canvas>
