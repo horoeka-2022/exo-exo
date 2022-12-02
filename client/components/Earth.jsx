@@ -3,7 +3,7 @@ import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import EarthMap from '../../server/public/RS3_EarthC.webp'
 import { useFrame, useLoader } from '@react-three/fiber'
 
-export default function Earth() {
+export default function Earth({ position }) {
   const colorMap = useLoader(TextureLoader, EarthMap)
   const earthRef = useRef()
 
@@ -12,7 +12,7 @@ export default function Earth() {
     earthRef.current.rotation.y = elapsedTime / 6
   })
   return (
-    <mesh ref={earthRef}>
+    <mesh ref={earthRef} position={position}>
       <sphereGeometry />
       <meshStandardMaterial map={colorMap} />
     </mesh>

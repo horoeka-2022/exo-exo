@@ -5,7 +5,7 @@ import cloud from '../../server/public/clouds-texture-png.png'
 import { useFrame, useLoader } from '@react-three/fiber'
 import * as THREE from 'three'
 
-export default function Earth() {
+export default function Earth({ position }) {
   // const colorMap = useLoader(TextureLoader, Kepler22bMap)
   const [colorMap, cloudsMap] = useLoader(TextureLoader, [Kepler22bMap, cloud])
   const KeplerRef = useRef()
@@ -20,12 +20,12 @@ export default function Earth() {
     <>
       <ambientLight intensity={0.4} />
       <pointLight color="#f6f3ea" position={[2, 0, 5]} intensity={1.2} />
-      <mesh ref={KeplerRef} position={(1, 2, 2)}>
+      <mesh ref={KeplerRef} position={position}>
         <sphereGeometry args={[1, 32, 32]} />
         <meshStandardMaterial map={colorMap} metalness={0.4} roughness={0.7} />
       </mesh>
 
-      <mesh ref={cloudRef} position={(1, 2, 2)}>
+      <mesh ref={cloudRef} position={position}>
         <sphereGeometry args={[1.005, 32, 32]} />
         <meshPhongMaterial
           map={cloudsMap}

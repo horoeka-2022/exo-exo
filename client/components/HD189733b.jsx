@@ -5,7 +5,7 @@ import HD33bAtmos from '../../server/public/8k_earth_clouds.png'
 import { useFrame, useLoader } from '@react-three/fiber'
 import * as THREE from 'three'
 
-export default function HD33b() {
+export default function HD33b({ position }) {
   const [colorMap, cloudsMap] = useLoader(TextureLoader, [HD33bMap, HD33bAtmos])
   const earthRef = useRef()
   const cloudsRef = useRef()
@@ -17,7 +17,7 @@ export default function HD33b() {
   })
   return (
     <>
-      <mesh ref={cloudsRef} position={(1, 2, 2)}>
+      <mesh ref={cloudsRef} position={position}>
         <sphereGeometry args={[1.005, 32, 32]} />
         <meshPhongMaterial
           map={cloudsMap}
@@ -27,7 +27,7 @@ export default function HD33b() {
           side={THREE.DoubleSide}
         />
       </mesh>
-      <mesh ref={earthRef} position={(1, 2, 2)}>
+      <mesh ref={earthRef} position={position}>
         <sphereGeometry args={[1, 32, 32]} />
         <meshStandardMaterial map={colorMap} />
       </mesh>

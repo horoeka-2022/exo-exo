@@ -7,7 +7,7 @@ import * as THREE from 'three'
 import HD80606bMap from '../../server/public/HD80606b.jpg'
 import HD80606bClouds from '../../server/public/cloudsred.png'
 
-export default function HD80606b() {
+export default function HD80606b({ position }) {
   const [colorMap, cloudMap] = useLoader(TextureLoader, [
     HD80606bMap,
     HD80606bClouds,
@@ -24,7 +24,7 @@ export default function HD80606b() {
   return (
     <>
       {/* Main Layer */}
-      <mesh ref={HD80606bRef}>
+      <mesh ref={HD80606bRef} position={position}>
         {/* <ambientLight intensity={0.2} />
         <spotLight position={[5, 10, 5]} angle={0.6} intensity={0.8} /> */}
         <sphereGeometry args={[1, 32, 32]} />
@@ -32,7 +32,7 @@ export default function HD80606b() {
       </mesh>
 
       {/* Atmosphere layer */}
-      <mesh ref={AtmosphereRef}>
+      <mesh ref={AtmosphereRef} position={position}>
         <ambientLight intensity={0.2} />
         <spotLight position={[5, 10, 5]} angle={0.6} intensity={1} />
         <sphereGeometry args={[1.005, 32, 32]} />
