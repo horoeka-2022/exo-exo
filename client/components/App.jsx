@@ -20,12 +20,12 @@ function App() {
         <ambientLight intensity={0.5} />
         <spotLight position={[10, 15, 10]} angle={0.3} />
         <Physics>
+          <Cancri position={[0, 25, 0]} args={[1.875, 32, 32]} />
           <Earth position={[0, 0, 0]} />
-          <HD80606b position={[0, 5, 0]} />
-          <HD189733b position={[0, -5, 0]} />
-          <Kepler22B position={[0, 10, 0]} />
-          <Upsilon position={[0, -10, 0]} />
-          <Cancri position={[0, 15, 0]} />
+          <HD80606b position={[0, 5, 0]} args={[0.3, 32, 32]} />
+          <HD189733b position={[0, -15, 0]} args={[7, 32, 32]} />
+          <Kepler22B position={[0, 13, 0]} args={[2.4, 32, 32]} />
+          <Upsilon position={[0, -45, 0]} args={[15, 32, 32]} />
         </Physics>
       </Suspense>
     </Canvas>

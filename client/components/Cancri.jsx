@@ -4,7 +4,7 @@ import CancriMap from '../../server/public/2k_sun.jpeg'
 import { useFrame, useLoader } from '@react-three/fiber'
 import { Sparkles, MeshRefractionMaterial } from '@react-three/drei'
 
-export default function Cancri({ position }) {
+export default function Cancri({ position, args }) {
   const textureMap = useLoader(TextureLoader, CancriMap)
   const cancriRef = useRef()
 
@@ -14,7 +14,7 @@ export default function Cancri({ position }) {
   })
   return (
     <mesh ref={cancriRef} position={position}>
-      <sphereGeometry />
+      <sphereGeometry args={args} />
       <meshStandardMaterial map={textureMap} scale={5} />
       <Sparkles
         count={50}
