@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
-import CancriMap from '../../server/public/ven0aaa2.jpg'
+import CancriMap from '../../server/public/2k_sun.jpeg'
 import { useFrame, useLoader } from '@react-three/fiber'
 import { Sparkles, MeshRefractionMaterial } from '@react-three/drei'
 
@@ -16,7 +16,13 @@ export default function Cancri() {
     <mesh ref={cancriRef}>
       <sphereGeometry />
       <meshStandardMaterial map={textureMap} scale={5} />
-      <Sparkles count={50} scale={1 * 2} size={6} speed={0} noise={[0, 0, 0]} />
+      <Sparkles
+        count={50}
+        scale={1 * 2}
+        size={2}
+        speed={0}
+        noise={[0.1, 0.1, 0.1]}
+      />
     </mesh>
   )
 }
