@@ -1,6 +1,6 @@
 import React, { Suspense, useRef } from 'react'
 import { Routes, Route } from 'react-router-dom'
-
+// import { motion } from 'framer-motion-3d'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Stars } from '@react-three/drei'
 import { Physics } from '@react-three/cannon'
