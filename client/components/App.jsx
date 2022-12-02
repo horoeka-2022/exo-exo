@@ -17,7 +17,6 @@ function App() {
         <spotLight position={[10, 15, 10]} angle={0.3} />
         <Physics>
           <Earth />
-          <Upsilon />
         </Physics>
       </Suspense>
     </Canvas>
