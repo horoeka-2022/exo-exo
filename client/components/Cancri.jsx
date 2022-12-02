@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import CancriMap from '../../server/public/2k_sun.jpeg'
 import { useFrame, useLoader } from '@react-three/fiber'
-import { Sparkles, MeshRefractionMaterial } from '@react-three/drei'
+import { Sparkles } from '@react-three/drei'
 
 export default function Cancri({ position, args }) {
   const textureMap = useLoader(TextureLoader, CancriMap)
