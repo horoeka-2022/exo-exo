@@ -5,7 +5,6 @@ import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Stars } from '@react-three/drei'
 import { Physics } from '@react-three/cannon'
 import Earth from './Earth'
-import Upsilon from './Upsilon'
 
 function App() {
   return (
