@@ -1,9 +1,13 @@
-import { useLoader, extend } from '@react-three/fiber'
-import { Html, useKeyboardControls } from '@react-three/drei'
+import { useLoader, extend, Canvas } from '@react-three/fiber'
+import {
+  Html,
+  useKeyboardControls,
+  OrbitControls,
+  Stars,
+} from '@react-three/drei'
 import React, { useRef } from 'react'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import PlaneTexture from '../../server/public/glass1.jpg'
-import * as THREE from 'three'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
 import myFont from '../../server/public/fonts/Trispace.json'
@@ -19,7 +23,10 @@ export default function Home() {
   const textMap = useLoader(TextureLoader, PlanetText)
 
   return (
-    <>
+    <Canvas>
+      <OrbitControls enablePan={false} />
+      <Stars count={20000} fade={true} />
+      <ambientLight intensity={0.5} />
       {/* plane screen */}
       <mesh ref={planeRef} position={[0, 0, 2]}>
         <ambientLight intensity={0.2} />
@@ -33,11 +40,6 @@ export default function Home() {
         />
         <planeGeometry args={[12, 6]} />
         {/* Html incorporation */}
-        <Html>
-          <div>
-            <center>{/* <h1>Hello World!</h1> */}</center>
-          </div>
-        </Html>
       </mesh>
 
       {/* title */}
@@ -55,6 +57,6 @@ export default function Home() {
           reflectivity={0}
         />
       </mesh>
-    </>
+    </Canvas>
   )
 }
