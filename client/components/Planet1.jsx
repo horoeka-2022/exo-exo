@@ -1,7 +1,10 @@
 import React, { useRef } from 'react'
+import { Html, Instance } from '@react-three/drei'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import Planet1Map from '../../server/public/Planet1.jpeg'
 import { useFrame, useLoader } from '@react-three/fiber'
+import '../../server/public/main.css'
+import PlanetInfo from './PlanetInfo'
 
 export default function Planet({ position, args }) {
   const colorMap = useLoader(TextureLoader, Planet1Map)
@@ -15,6 +18,17 @@ export default function Planet({ position, args }) {
     <mesh ref={planet1Ref} position={position}>
       <sphereGeometry args={args} />
       <meshStandardMaterial map={colorMap} />
+      {/* <Instance
+        ref={ref}
+        onPointerOver={(e) => (e.stopPropagation(), setHover(true))}
+        onPointerOut={(e) => setHover(false)} */}
+      {/* > */}
+      <Html distanceFactor={5}>
+        <div className="PlanetInfo">
+          <PlanetInfo />
+        </div>
+      </Html>
+      {/* </Instance> */}
     </mesh>
   )
 }

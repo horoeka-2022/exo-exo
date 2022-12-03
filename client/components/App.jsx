@@ -2,14 +2,11 @@ import React, { Suspense, useRef, useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Orbit from './Orbit'
 
+import Home from './Home'
+
 import { Canvas } from '@react-three/fiber'
-import {
-  OrbitControls,
-  Stars,
-  Bounds,
-  useBounds,
-  Html,
-} from '@react-three/drei'
+import { OrbitControls, Stars, Bounds, useBounds } from '@react-three/drei'
+
 import { Physics } from '@react-three/cannon'
 import Earth from './Earth'
 import HD80606b from './HD80606b'
@@ -83,8 +80,8 @@ function App() {
                 rotation={[1, 0, 0]}
               />
 
-              <Planet1 position={[64, -15, -236]} args={[0.8, 32, 32]} />
-              <Planet2 position={[7, -60, 150]} args={[1.2, 32, 32]} />
+              <Planet1 position={[64, -15, -236]} args={[28, 32, 32]} />
+              {/* <Planet2 position={[7, -60, 150]} args={[1.2, 32, 32]} />
               <Planet3 position={[-37, -85, 108]} args={[1.7, 32, 32]} />
               <Planet4 position={[7, -125, 328]} args={[6, 32, 32]} />
               <Planet5 position={[-55, -17, -6]} args={[3.1, 32, 32]} />
@@ -94,7 +91,9 @@ function App() {
               <Planet9 position={[-20, 104, 98]} args={[1.4, 32, 32]} />
               <Planet10 position={[1, -50, -26]} args={[2.1, 32, 32]} />
               <Planet11 position={[-28, -15, 28]} args={[3.7, 32, 32]} />
-              <Planet12 position={[-20, 10, 90]} args={[1.8, 32, 32]} />
+              <Planet12 position={[-20, 10, 90]} args={[1.8, 32, 32]} /> */}
+
+              {/* <Home /> */}
             </Physics>
           </SelectToZoom>
         </Bounds>
