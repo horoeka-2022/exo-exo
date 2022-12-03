@@ -1,6 +1,7 @@
 body{
   margin: 0;
   position: fixed;
+  color: red;
 }
 .canvas {
   height: 100vh;
