@@ -49,7 +49,7 @@ canvas {
   position: absolute;
 }
 
-.PlanetInfo {
+.ExoplanetInfo {
   padding-top: 10px;
   font-family: Verdana, Geneva, Tahoma, sans-serif ;
   /* transform: translate3d(calc(50% + 40px), 0, 0); */

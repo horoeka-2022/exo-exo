@@ -4,7 +4,7 @@ import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import Planet1Map from '../../server/public/Planet1.jpeg'
 import { useFrame, useLoader } from '@react-three/fiber'
 import '../../server/public/main.css'
-import PlanetInfo from './PlanetInfo'
+import ExoplanetInfo from './ExoplanetInfo'
 
 export default function Planet({ position, args }) {
   const colorMap = useLoader(TextureLoader, Planet1Map)
@@ -24,8 +24,8 @@ export default function Planet({ position, args }) {
         onPointerOut={(e) => setHover(false)} */}
       {/* > */}
       <Html distanceFactor={5}>
-        <div className="PlanetInfo">
-          <PlanetInfo />
+        <div className="exoplanetInfo">
+          <ExoplanetInfo />
         </div>
       </Html>
       {/* </Instance> */}
