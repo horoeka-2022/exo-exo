@@ -12,12 +12,12 @@ import {
   useBounds
 } from '@react-three/drei'
 import { Physics } from '@react-three/cannon'
-import Earth from './Earth'
-import HD80606b from './HD80606b'
-import HD189733b from './HD189733b'
-import Kepler22B from './Kepler22b'
-import Upsilon from './Upsilon'
-import Cancri from './Cancri'
+import Earth from './planets/Earth'
+import HD80606b from './planets/HD80606b'
+import HD189733b from './planets/HD189733b'
+import Kepler22B from './planets/Kepler22b'
+import Upsilon from './planets/Upsilon'
+import Cancri from './planets/Cancri'
 
 function App() {
   return (
