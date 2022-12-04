@@ -1,5 +1,6 @@
 import React, { Suspense, useRef } from 'react'
 import { Routes, Route } from 'react-router-dom'
+import Music from './Sound'
 
 import { Canvas } from '@react-three/fiber'
 import {
@@ -8,7 +9,7 @@ import {
   Loader,
   OrbitControls,
   Stars,
-  useBounds,
+  useBounds
 } from '@react-three/drei'
 import { Physics } from '@react-three/cannon'
 import Earth from './planets/Earth'
@@ -21,6 +22,7 @@ import Cancri from './planets/Cancri'
 function App() {
   return (
     <>
+      <Music />
       <Canvas camera={{ position: [0, -10, 80], fov: 50 }} dpr={[1, 2]}>
         <spotLight position={[10, 15, 10]} angle={0.3} />
         <OrbitControls
