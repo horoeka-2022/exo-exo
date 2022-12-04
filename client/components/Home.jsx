@@ -6,16 +6,17 @@ import PlaneTexture from '../../server/public/glass1.jpg'
 import * as THREE from 'three'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
-import myFont from '../../server/public/fonts/Trispace.json'
+import titleFont from '../../server/public/fonts/space-quest.json'
+
 import PlanetText from '../../server/public/HD80606b.jpg'
-import { FrontSide, DoubleSide } from 'three'
+import { FrontSide } from 'three'
 
 extend({ TextGeometry })
 
 export default function Home() {
   const planeMap = useLoader(TextureLoader, PlaneTexture)
   const planeRef = useRef()
-  const font = new FontLoader().parse(myFont)
+  const font = new FontLoader().parse(titleFont)
   const textMap = useLoader(TextureLoader, PlanetText)
 
   return (
