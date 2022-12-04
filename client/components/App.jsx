@@ -28,6 +28,7 @@ function App() {
           makeDefault
           minPolarAngle={0}
           maxPolarAngle={Math.PI / 1.75}
+          minDistance={2}
         />
         <Stars count={20000} fade={true} />
         <ambientLight intensity={0.5} />
