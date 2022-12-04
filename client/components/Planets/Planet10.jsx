@@ -1,18 +1,18 @@
 import React, { useRef } from 'react'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
-import Planet12Map from '../../server/public/Planet12.jpeg'
+import Planet10Map from '../../../server/public/Planet10.jpeg'
 import { useFrame, useLoader } from '@react-three/fiber'
 
 export default function Planet({ position, args }) {
-  const colorMap = useLoader(TextureLoader, Planet12Map)
-  const planet12Ref = useRef()
+  const colorMap = useLoader(TextureLoader, Planet10Map)
+  const planet10Ref = useRef()
 
   useFrame(({ clock }) => {
     const elapsedTime = clock.getElapsedTime()
-    planet12Ref.current.rotation.y = elapsedTime / 1.4
+    planet10Ref.current.rotation.y = elapsedTime / 2
   })
   return (
-    <mesh ref={planet12Ref} position={position}>
+    <mesh ref={planet10Ref} position={position}>
       <sphereGeometry args={args} />
       <meshStandardMaterial map={colorMap} />
     </mesh>

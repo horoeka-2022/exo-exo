@@ -20,7 +20,7 @@ export default function Orbit() {
 function Sun() {
   return (
     <mesh>
-      <sphereGeometry args={[6, 32, 32]} />
+      <sphereGeometry args={[3, 32, 32]} />
       <meshStandardMaterial color="#E1DC59" />
     </mesh>
   )
@@ -30,8 +30,8 @@ function Planet({ planet: { color, xRadius, zRadius, size } }) {
 
   useFrame(({ clock }) => {
     const t = clock.getElapsedTime()
-    const x = xRadius * Math.sin(t / 8)
-    const z = zRadius * Math.cos(t / 8)
+    const x = xRadius * Math.sin(t / 2)
+    const z = zRadius * Math.cos(t / 2)
     planetRef.current.position.x = x
     planetRef.current.position.z = z
   })

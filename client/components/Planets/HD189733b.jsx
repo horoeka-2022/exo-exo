@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
-import HD33bMap from '../../server/public/HD189733b.webp'
-import HD33bAtmos from '../../server/public/8k_earth_clouds.png'
+import HD33bMap from '../../../server/public/HD189733b.webp'
+import HD33bAtmos from '../../../server/public/8k_earth_clouds.png'
 import { useFrame, useLoader } from '@react-three/fiber'
 import * as THREE from 'three'
 

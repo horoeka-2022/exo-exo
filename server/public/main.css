@@ -49,12 +49,13 @@ canvas {
   position: absolute;
 }
 
-.ExoplanetInfo {
+.content {
+  font-size: 100px;
   padding-top: 10px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif ;
-  /* transform: translate3d(calc(50% + 40px), 0, 0); */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  transform: translate3d(calc(50% + 40px), 0, 0);
   text-align: left;
-  background-color:rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.1);
   color: rgb(243, 78, 229);
   font-size: 50px;
   padding: 10px 15px;

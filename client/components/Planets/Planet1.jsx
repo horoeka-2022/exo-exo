@@ -1,10 +1,10 @@
 import React, { useRef } from 'react'
-import { Html, Instance } from '@react-three/drei'
+import { Html } from '@react-three/drei'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
-import Planet1Map from '../../server/public/Planet1.jpeg'
+import Planet1Map from '../../../server/public/Planet1.jpeg'
 import { useFrame, useLoader } from '@react-three/fiber'
-import '../../server/public/main.css'
-import ExoplanetInfo from './ExoplanetInfo'
+import '../../../server/public/main.css'
+import Info from '../Info'
 
 export default function Planet({ position, args }) {
   const colorMap = useLoader(TextureLoader, Planet1Map)
@@ -21,11 +21,11 @@ export default function Planet({ position, args }) {
       {/* <Instance
         ref={ref}
         onPointerOver={(e) => (e.stopPropagation(), setHover(true))}
-        onPointerOut={(e) => setHover(false)} */}
-      {/* > */}
-      <Html distanceFactor={5}>
-        <div className="exoplanetInfo">
-          <ExoplanetInfo />
+        onPointerOut={(e) => setHover(false)}
+      > */}
+      <Html distanceFactor={10}>
+        <div className="content">
+          <Info />
         </div>
       </Html>
       {/* </Instance> */}
