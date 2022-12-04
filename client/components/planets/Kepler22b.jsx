@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
-import Kepler22bMap from '../../../server/public/textures/Kepler-22_b.jpeg'
-import cloud from '../../../server/public/textures/clouds-texture-png.png'
+import Kepler22bMap from '../../../server/public/Kepler-22_b.jpeg'
+import cloud from '../../../server/public/clouds-texture-png.png'
 import { useFrame, useLoader } from '@react-three/fiber'
 import * as THREE from 'three'
 
