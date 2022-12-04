@@ -4,3 +4,5 @@ bundle.*
 *.sqlite3
 .env
 server/public/output.css
+.DS_Store
+server/.DS_Store
