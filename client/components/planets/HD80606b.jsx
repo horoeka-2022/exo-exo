@@ -4,8 +4,8 @@ import { useFrame, useLoader } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
 
-import HD80606bMap from '../../../server/public/HD80606b.jpg'
-import HD80606bClouds from '../../../server/public/cloudsred.png'
+import HD80606bMap from '../../../server/public/textures/HD80606b.jpg'
+import HD80606bClouds from '../../../server/public/textures/cloudsred.png'
 
 export default function HD80606b({ position, args }) {
   const [colorMap, cloudMap] = useLoader(TextureLoader, [
