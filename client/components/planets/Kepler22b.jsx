@@ -1,11 +1,10 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import Kepler22bMap from '../../../server/public/textures/Kepler-22_b.jpeg'
 import cloud from '../../../server/public/textures/clouds-texture-png.png'
 import { useFrame, useLoader } from '@react-three/fiber'
 import * as THREE from 'three'
 import { Html } from '@react-three/drei'
-import Test from './Test'
 
 export default function Earth({ position, args }) {
   // const colorMap = useLoader(TextureLoader, Kepler22bMap)
@@ -18,6 +17,8 @@ export default function Earth({ position, args }) {
     KeplerRef.current.rotation.y = elapsedTime / 4
     cloudRef.current.rotation.y = elapsedTime / 6
   })
+
+  const [active, setActive] = useState(false)
 
   function displayCard() {
     if (active === true)
@@ -49,7 +50,6 @@ export default function Earth({ position, args }) {
       >
         {displayCard()}
 
-      <mesh ref={cloudRef} position={position}>
         <sphereGeometry args={[2.412, 32, 32]} />
         <meshPhongMaterial
           map={cloudsMap}
