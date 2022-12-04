@@ -50,7 +50,7 @@ function App() {
         <Stars count={20000} fade={true} />
         <ambientLight intensity={0.5} />
         <Suspense fallback={null}>
-          <Orbit position={[0, 0, -500]} />
+          {/* <Orbit position={[0, 0, -500]} /> */}
           <Bounds fit clip observe margin={1.2}>
             <SelectToZoom>
               <Physics>

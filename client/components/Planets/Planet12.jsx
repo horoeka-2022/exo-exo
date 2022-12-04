@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
-import Planet12Map from '../../../server/public/Planet12.jpeg'
+import Planet12Map from '../../../server/public/textures/Planet12.jpeg'
 import { useFrame, useLoader } from '@react-three/fiber'
 
 export default function Planet({ position, args }) {
