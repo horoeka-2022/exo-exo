@@ -4,6 +4,8 @@ import Kepler22bMap from '../../../server/public/textures/Kepler-22_b.jpeg'
 import cloud from '../../../server/public/textures/clouds-texture-png.png'
 import { useFrame, useLoader } from '@react-three/fiber'
 import * as THREE from 'three'
+import { Html } from '@react-three/drei'
+import Test from './Test'
 
 export default function Earth({ position, args }) {
   // const colorMap = useLoader(TextureLoader, Kepler22bMap)
@@ -16,6 +18,21 @@ export default function Earth({ position, args }) {
     KeplerRef.current.rotation.y = elapsedTime / 4
     cloudRef.current.rotation.y = elapsedTime / 6
   })
+
+  function displayCard() {
+    if (active === true)
+      return (
+        <Html distanceFactor={5} position={[0, 2, 0]}>
+          <div className="card">
+            <div className="kepler-card-image"></div>
+            <div className="card-text"></div>
+            <span className="date">Discovery: 2011</span>
+            <h2>Kepler 22b</h2>
+            <p>Super Earth</p>
+          </div>
+        </Html>
+      )
+  }
   return (
     <>
       <ambientLight intensity={0.4} />
@@ -24,6 +41,13 @@ export default function Earth({ position, args }) {
         <sphereGeometry args={args} />
         <meshStandardMaterial map={colorMap} metalness={0.4} roughness={0.7} />
       </mesh>
+
+      <mesh
+        ref={cloudRef}
+        position={position}
+        onClick={() => setActive(!active)}
+      >
+        {displayCard()}
 
       <mesh ref={cloudRef} position={position}>
         <sphereGeometry args={[2.412, 32, 32]} />
