@@ -50,7 +50,6 @@ function App() {
                   position={[-20, 5, -1]}
                   args={[7, 32, 32]}
                   rotation={[2, 0, 1]}
-            
                 />
                 <Kepler22B
                   position={[18, 15, -25]}
