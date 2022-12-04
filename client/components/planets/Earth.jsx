@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
-import EarthMap from '../../server/public/RS3_EarthC.webp'
+import EarthMap from '../../../server/public/textures/RS3_EarthC.webp'
 import { useFrame, useLoader } from '@react-three/fiber'
 
 export default function Earth({ position }) {
