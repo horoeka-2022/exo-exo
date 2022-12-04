@@ -9,9 +9,11 @@ body{
 }
 
 .planet-info{
+  color: greenyellow;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  width: 40%;
   font-family: 'VT323', monospace;
-  font-size: 25px;
+  font-size: 40px;
+  margin-bottom: .5em;
 }
