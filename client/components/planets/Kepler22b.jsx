@@ -1,16 +1,15 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef } from 'react'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
-import Kepler22bMap from '../../../server/public/textures/Kepler-22_b.jpeg'
-import cloud from '../../../server/public/textures/clouds-texture-png.png'
-import { useFrame, useLoader, useThree } from '@react-three/fiber'
+import Kepler22bMap from '../../../server/public/Kepler-22_b.jpeg'
+import cloud from '../../../server/public/clouds-texture-png.png'
+import { useFrame, useLoader } from '@react-three/fiber'
 import * as THREE from 'three'
 
 export default function Earth({ position, args }) {
+  // const colorMap = useLoader(TextureLoader, Kepler22bMap)
   const [colorMap, cloudsMap] = useLoader(TextureLoader, [Kepler22bMap, cloud])
   const KeplerRef = useRef()
   const cloudRef = useRef()
-
-  const [active, setActive] = useState(false)
 
   useFrame(({ clock }) => {
     const elapsedTime = clock.getElapsedTime()
@@ -26,12 +25,7 @@ export default function Earth({ position, args }) {
         <meshStandardMaterial map={colorMap} metalness={0.4} roughness={0.7} />
       </mesh>
 
-      <mesh
-        ref={cloudRef}
-        position={position}
-        scale={active ? 1 : 1}
-        onClick={() => console.log('hello')}
-      >
+      <mesh ref={cloudRef} position={position}>
         <sphereGeometry args={[2.412, 32, 32]} />
         <meshPhongMaterial
           map={cloudsMap}

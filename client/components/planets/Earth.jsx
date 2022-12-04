@@ -1,9 +1,12 @@
 import React, { useRef } from 'react'
+import { Html } from '@react-three/drei'
+import Info from './Info'
+
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
-import EarthMap from '../../../server/public/EarthHD.webp'
+import EarthMap from '../../server/public/RS3_EarthC.webp'
 import { useFrame, useLoader } from '@react-three/fiber'
 
-export default function Earth({ position }) {
+export default function Earth({ position, args }) {
   const colorMap = useLoader(TextureLoader, EarthMap)
   const earthRef = useRef()
 
@@ -13,8 +16,13 @@ export default function Earth({ position }) {
   })
   return (
     <mesh ref={earthRef} position={position}>
-      <sphereGeometry />
+      <sphereGeometry args={args} />
       <meshStandardMaterial map={colorMap} />
+      <Html distanceFactor={10}>
+        <div className="content">
+          <Info />
+        </div>
+      </Html>
     </mesh>
   )
 }
