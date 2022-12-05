@@ -11,15 +11,15 @@ body{
 }
 
 .card {
-  z-index: 10;
-  display: grid;
-  grid-template-columns: 800px;
+  /* z-index: 10; */
+  /* display: flex; */
+  /* grid-template-columns: 800px;
   grid-template-rows: 300px 250px 250px;
-  grid-template-areas: 'image' 'text';
+  grid-template-areas: 'image' 'text'; */
   background: rgba(0, 0, 0, 0.1);
   box-shadow: 15px 15px 15px rgba(64, 114, 55, 0.9);
-  font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  text-align: center;
+  font-family: 'VT323', monospace; 
+  /* text-align: center; */
   color: rgb(20, 154, 20);
   font-size: auto;
   font-weight: 200;
@@ -28,6 +28,17 @@ body{
 .planet-title{
   font-size: 5rem;
   font-weight: 200;
+}
+
+.flexText {
+  flex-direction: column;
+  padding: 50px 50px 40px 50px;
+  
+}
+
+.kepler {
+  width: 1000px;
+  text-align: center;
 }
 
 
