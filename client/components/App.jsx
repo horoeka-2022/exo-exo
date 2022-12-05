@@ -9,8 +9,9 @@ import {
   Loader,
   OrbitControls,
   Stars,
-  useBounds,
+  useBounds
 } from '@react-three/drei'
+import Hud from './HUD/Hud'
 import { Physics } from '@react-three/cannon'
 import Earth from './planets/Earth'
 import HD80606b from './planets/HD80606b'
@@ -38,6 +39,7 @@ function App() {
   return (
     <>
       <Music />
+      <Hud />
       <Canvas camera={{ position: [0, -10, 80], fov: 50 }} dpr={[1, 2]}>
         <spotLight position={[10, 15, 10]} angle={0.3} />
         <OrbitControls
