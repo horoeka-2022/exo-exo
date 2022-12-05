@@ -41,7 +41,9 @@
     "express-jwt-authz": "^2.4.1",
     "jwks-rsa": "^2.0.4",
     "knex": "^1.0.1",
-    "react-redux": "^7.2.5"
+    "react-redux": "^7.2.5",
+    "react-simple-typewriter": "^5.0.1",
+    "react-sound": "^1.2.0"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.18.6",

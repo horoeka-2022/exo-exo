@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import { useFrame, useLoader } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
 
 import HD80606bMap from '../../../server/public/textures/HD80606b.jpg'
