@@ -7,7 +7,6 @@ import * as THREE from 'three'
 import { Html } from '@react-three/drei'
 
 export default function Earth({ position, args }) {
-  // const colorMap = useLoader(TextureLoader, Kepler22bMap)
   const [colorMap, cloudsMap] = useLoader(TextureLoader, [Kepler22bMap, cloud])
   const KeplerRef = useRef()
   const cloudRef = useRef()
@@ -24,12 +23,11 @@ export default function Earth({ position, args }) {
     if (active === true)
       return (
         <Html distanceFactor={5} position={[0, 2, 0]}>
-          <div className="card">
-            <div className="kepler-card-image"></div>
-            <div className="card-text"></div>
-            <span className="date">Discovery: 2011</span>
-            <h2>Kepler 22b</h2>
-            <p>Super Earth</p>
+          <div className="card kepler">
+            <div className="flexText">
+              <h2 className="planet-title">Name: Kepler 22b</h2>
+              <p className="planet-description">Description: Super Earth</p>
+            </div>
           </div>
         </Html>
       )

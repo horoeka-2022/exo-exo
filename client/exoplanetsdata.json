@@ -44,13 +44,17 @@
   "Radius":"0.3 x Earth"
 },
 {
-  "Name":"HD 189733 b",
-  "Description":"The cobalt blue colour comes from a hazy, blow-torched atmosphere containing clouds laced with glass. Winds send the glass storming sideways at 8690 kmh.",
-  "Distance from Earth":"64 light-years.",
-  "Habitable?":"No.",
-  "Atmosphere":"Sodium, Potassium, Carbon Dioxide.",
-  "Temperature":"935.85 °C",
-  "Radius":"12.54 x Earth"
+  "name":"HD 189733 b",
+  "type": "Gas Giant",
+  "description": "The planet’s cobalt blue colour comes from a hazy, blow-torched atmosphere containing clouds laced with glass. Howling winds send the storming glass sideways at 5,400 mph (2km/s), whipping all in a sickening spiral.",
+  "distance":"64 light years",
+  "time":"721 Million years",
+  "habitability":"Nope",
+  "atmosphere":"sodium, potassium, carbon dioxide",
+  "temperature":"935.85*c",
+  "sound":"sound tbc",
+  "orbit":"2.2180 days",
+  "radius":"12.54"
 }]
 
 

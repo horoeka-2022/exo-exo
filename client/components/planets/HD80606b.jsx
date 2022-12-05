@@ -1,7 +1,7 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import { useFrame, useLoader } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
+import { OrbitControls, Html } from '@react-three/drei'
 import * as THREE from 'three'
 
 import HD80606bMap from '../../../server/public/textures/HD80606b.jpg'
@@ -12,6 +12,7 @@ export default function HD80606b({ position, args }) {
     HD80606bMap,
     HD80606bClouds,
   ])
+
   const HD80606bRef = useRef()
   const AtmosphereRef = useRef()
 
@@ -21,18 +22,34 @@ export default function HD80606b({ position, args }) {
     AtmosphereRef.current.rotation.y = elapsedTime / 2
   })
 
+  const [active, setActive] = useState(false)
+
+  function displayCard() {
+    if (active === true)
+      return (
+        <Html distanceFactor={5} position={[0, 0.5, 0]}>
+          <div className="card HD606b">
+            <div className="flexText">
+              <h2 className="HD606b-title">Name: HD 80606 b</h2>
+              <p className="HD606b-description">Description: lil Gas Giant</p>
+            </div>
+          </div>
+        </Html>
+      )
+  }
+
   return (
     <>
-      {/* Main Layer */}
       <mesh ref={HD80606bRef} position={position}>
-        {/* <ambientLight intensity={0.2} />
-        <spotLight position={[5, 10, 5]} angle={0.6} intensity={0.8} /> */}
         <sphereGeometry args={args} />
         <meshStandardMaterial map={colorMap} />
       </mesh>
-
-      {/* Atmosphere layer */}
-      <mesh ref={AtmosphereRef} position={position}>
+      <mesh
+        ref={AtmosphereRef}
+        position={position}
+        onClick={() => setActive(!active)}
+      >
+        {displayCard()}
         <ambientLight intensity={0.2} />
         <spotLight position={[5, 10, 5]} angle={0.6} intensity={1} />
         <sphereGeometry args={[0.3015, 32, 32]} />
