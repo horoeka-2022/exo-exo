@@ -38,7 +38,7 @@ import Planet12 from './planets/Planet12'
 function App() {
   return (
     <>
-      <Music />
+      <Music autoLoad={true} />
       <Hud />
       <Canvas camera={{ position: [0, -10, 80], fov: 50 }} dpr={[1, 2]}>
         <spotLight position={[10, 15, 10]} angle={0.3} />
@@ -48,7 +48,8 @@ function App() {
           minPolarAngle={0}
           maxPolarAngle={Math.PI / 1.75}
           minDistance={2}
-          // autoRotate={true}
+          autoRotate={true}
+          autoRotateSpeed={0.2}
         />
         <Stars count={20000} fade={true} />
         <ambientLight intensity={0.5} />

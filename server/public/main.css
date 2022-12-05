@@ -57,8 +57,6 @@ body{
 
 
 
-
-
 .upsilon {
   width: 4000px;
   text-align: center;
@@ -209,7 +207,7 @@ canvas {
 
 .HUDcontainer {
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   /* align-items: center; */
   width: 100%;
 }
@@ -239,6 +237,32 @@ canvas {
   opacity: 0.8;
 }
 
+.indicator-bars .indicator-bar .bar {
+  transform: translateY(calc(100% + 2px));
+  will-change: transform;
+
+  animation: gaze-inner-bar-appear 25s;
+  animation-fill-mode: forwards;
+  animation-timing-function: steps(10, end);
+}
+
+.indicator-bars .indicator-bar .bar-1 {
+  animation-delay: 8s;
+}
+.indicator-bars .indicator-bar .bar-2 {
+  animation-delay: 0s;
+}
+.indicator-bars .indicator-bar .bar-3 {
+  animation-delay: 2s;
+}
+.indicator-bars .indicator-bar .bar-4 {
+  animation-delay: 5s;
+}
+.indicator-bars .indicator-bar .bar-5 {
+  animation-delay: 17s;
+}
+
+
 .indicator-bars ul {
   height: 120px;
   margin: 10px;
@@ -254,11 +278,11 @@ canvas {
   will-change: opacity;
 }
 
-ul.indicator {
+ul.levels {
   padding: 0;
 }
 
-ul.indicator li {
+ul.levels li {
   position: relative;
   margin: 20px 0;
   width: 300px;
@@ -269,7 +293,7 @@ ul.indicator li {
   opacity: 0.45;
 }
 
-ul.indicator li .charge {
+ul.levels li .charge {
   position: absolute;
   width: 100%;
   height: 50px;
@@ -280,7 +304,7 @@ ul.indicator li .charge {
 }
 
 
-ul.indicator li .li-content {
+ul.levels li .li-content {
   padding: 10px 0px 10px 10px;
   display: flex;
   justify-content: space-between;
@@ -319,16 +343,16 @@ ul.levels li .charge-5 {
   transform: scaleX(0.6) translateY(-15px) translateX(-10px);
 }
 
-/* .levels-information {
+.levels-information {
   width: 300px;
   height: 100px;
   margin-top: 40px;
   text-align: center;
-  text-shadow: 0 0 4px #f5af19;
+  text-shadow: 0 0 4px #88ff00;
   font-size: 14px;
   opacity: 0.8;
   will-change: opacity;
-} */
+}
 
 .right-part {
   padding-left: 500px;
