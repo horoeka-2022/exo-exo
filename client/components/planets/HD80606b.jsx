@@ -27,13 +27,12 @@ export default function HD80606b({ position, args }) {
   function displayCard() {
     if (active === true)
       return (
-        <Html distanceFactor={5} position={[0, 2, 0]}>
-          <div className="card">
-            <div className="kepler-card-image"></div>
-            <div className="card-text"></div>
-            <span className="date">Discovery: 2001</span>
-            <h2>HD 80606 b</h2>
-            <p>Gas Giant</p>
+        <Html distanceFactor={5} position={[0, 0.5, 0]}>
+          <div className="card HD606b">
+            <div className="flexText">
+              <h2 className="HD606b-title">HD 80606 b</h2>
+              <p className="HD606b-description"> lil Gas Giant</p>
+            </div>
           </div>
         </Html>
       )

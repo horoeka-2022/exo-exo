@@ -18,12 +18,15 @@ export default function Cancri({ position, args }) {
     if (active === true)
       return (
         <Html distanceFactor={5} position={[0, 2, 0]}>
-          <div className="card">
-            <div className="kepler-card-image"></div>
-            <div className="card-text"></div>
-            <span className="date">Distance: 40 Light Years</span>
-            <h2>55 Cancri e</h2>
-            <p>Carbon, Nitrogen Oxygen</p>
+          <div className="card cancri">
+            <div className="flexText">
+              <h2 className="cancri-title">55 Cancri e</h2>
+              <p className="cancri-description">
+                A molten surface planet with sparkling silicate skies.
+                Approximately 8 times heavier than Earth with twice the
+                diameter.
+              </p>
+            </div>
           </div>
         </Html>
       )

@@ -19,16 +19,13 @@ export default function Upsilon({ position, args }) {
     if (active === true)
       return (
         <Html distanceFactor={5} position={[0, 2, 0]}>
-          <div className="card">
-            <div className="kepler-card-image"></div>
-            <div className="card-text"></div>
-
-            <span className="date">Discovery: 1996</span>
-            <h2>Upsilon Andromedae b</h2>
-            <p>
-              A giant planet composed mainly of gas, it has no solid surface.
-            </p>
-
+          <div className="card upsilon">
+            <div className="flexText">
+              <h2 className="upsilon-title">Upsilon Andromedae b</h2>
+              <p className="upsilon-description">
+                A giant planet composed mainly of gas, it has no solid surface.
+              </p>
+            </div>
           </div>
         </Html>
       )
@@ -44,6 +41,5 @@ export default function Upsilon({ position, args }) {
       <sphereGeometry args={args} />
       <meshStandardMaterial map={colorMap} />
     </mesh>
-
   )
 }

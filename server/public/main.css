@@ -39,18 +39,56 @@ body{
   font-weight: 200;
 }
 
+.planet-description {
+  font-size: 3rem;
+}
+
 .flexText {
   flex-direction: column;
-  padding: 50px 50px 40px 50px;
-  
+  font-size: 20rem;
 }
 
 .kepler {
   width: 1000px;
   text-align: center;
+  padding: 50px 30px 40px 30px;
 }
 
 
+
+
+
+.upsilon {
+  width: 4000px;
+  text-align: center;
+  padding: 300px 700px 300px 700px;
+}
+
+.upsilon-title{
+  font-size: 20rem;
+  font-weight: 200;
+}
+
+.upsilon-description {
+  font-size: 15rem;
+}
+
+.HD33b {
+  width: 1800px;
+  padding: 100px 600px 100px 600px;
+  text-align: center;
+  font-size: 10rem;
+
+}
+
+.HD33b-title{
+  font-size: 14rem;
+  font-weight: 200;
+}
+
+.HD33b-description {
+  font-size: 10rem;
+}
 
 .kepler-card-image {
   grid-area: image;
@@ -58,11 +96,51 @@ body{
   background-size: cover;
 }
 
-.card-text {
-  grid-area: text;
-  margin: 50px;
-  font-size: 5rem;
+.cancri {
+  width: 700px;
+  text-align: center;
+  padding: 50px 80px 40px 80px;
+}
+
+.cancri-title{
+  font-size: 4rem;
   font-weight: 200;
+}
+
+.cancri-description {
+  font-size: 2rem;
+}
+
+.HD606b {
+  width: 100px;
+  padding: 10px 40px 10px 40px;
+  text-align: center;
+
+}
+
+.HD606b-title{
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.HD606b-description {
+  font-size: 0.75rem;
+}
+
+.earth {
+  width: 300px;
+  padding: 30px 100px 30px 100px;
+  text-align: center;
+
+}
+
+.earth-title{
+  font-size: 3rem;
+  font-weight: 200;
+}
+
+.earth-description {
+  font-size: 1.5rem;
 }
 
 
