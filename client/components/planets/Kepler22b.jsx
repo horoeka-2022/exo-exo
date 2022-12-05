@@ -7,7 +7,6 @@ import * as THREE from 'three'
 import { Html } from '@react-three/drei'
 
 export default function Earth({ position, args }) {
-  // const colorMap = useLoader(TextureLoader, Kepler22bMap)
   const [colorMap, cloudsMap] = useLoader(TextureLoader, [Kepler22bMap, cloud])
   const KeplerRef = useRef()
   const cloudRef = useRef()

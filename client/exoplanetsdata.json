@@ -69,7 +69,8 @@
 },
 {
   "name":"HD 189733 b",
-  "description":"The planet’s cobalt blue colour comes from a hazy, blow-torched atmosphere containing clouds laced with glass. Howling winds send the storming glass sideways at 5,400 mph (2km/s), whipping all in a sickening spiral.",
+  "type": "Gas Giant",
+  "description": "The planet’s cobalt blue colour comes from a hazy, blow-torched atmosphere containing clouds laced with glass. Howling winds send the storming glass sideways at 5,400 mph (2km/s), whipping all in a sickening spiral.",
   "distance":"64 light years",
   "time":"721 Million years",
   "habitability":"Nope",

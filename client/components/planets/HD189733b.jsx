@@ -1,9 +1,10 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import HD33bMap from '../../../server/public/textures/HD189733b.webp'
 import HD33bAtmos from '../../../server/public/textures/8k_earth_clouds.png'
 import { useFrame, useLoader } from '@react-three/fiber'
 import * as THREE from 'three'
+import { Html } from '@react-three/drei'
 
 export default function HD33b({ position, args }) {
   const [colorMap, cloudsMap] = useLoader(TextureLoader, [HD33bMap, HD33bAtmos])
@@ -15,9 +16,32 @@ export default function HD33b({ position, args }) {
     earthRef.current.rotation.y = elapsedTime / 6
     cloudsRef.current.rotation.y = elapsedTime / 0.1
   })
+
+  const [active, setActive] = useState(false)
+
+  function displayCard() {
+    if (active === true)
+      return (
+        <Html distanceFactor={5} position={[0, 2, 0]}>
+          <div className="card">
+            <div className="kepler-card-image"></div>
+            <div className="card-text"></div>
+            <span className="date">Discovery: ??</span>
+            <h2>HD 189733 b</h2>
+            <p>Gas Giant</p>
+          </div>
+        </Html>
+      )
+  }
+
   return (
     <>
-      <mesh ref={cloudsRef} position={position}>
+      <mesh
+        ref={cloudsRef}
+        position={position}
+        onClick={() => setActive(!active)}
+      >
+        {displayCard()}
         <sphereGeometry args={[7.035, 32, 32]} />
         <meshPhongMaterial
           map={cloudsMap}
