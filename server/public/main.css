@@ -30,18 +30,18 @@ body{
   box-shadow: 15px 15px 15px rgba(64, 114, 55, 0.9);
   font-family: 'VT323', monospace; 
   /* text-align: center; */
-  color: rgb(20, 154, 20);
+  color: rgb(122, 203, 0);
   font-size: auto;
   font-weight: 200;
 }
 
 .planet-title{
-  font-size: 5rem;
+  font-size: 8rem;
   font-weight: 200;
 }
 
 .planet-description {
-  font-size: 3rem;
+  font-size: 5.5rem;
 }
 
 .flexText {
@@ -50,96 +50,94 @@ body{
 }
 
 .kepler {
-  width: 1000px;
-  text-align: center;
-  padding: 50px 30px 40px 30px;
+  width: 900px;
+  text-align: right;
+  padding: 50px 300px 40px 300px;
 }
 
-
-
 .upsilon {
-  width: 4000px;
-  text-align: center;
-  padding: 300px 700px 300px 700px;
+  width: 5000px;
+  text-align: right;
+  padding: 200px 1000px 500px 3000px;
+  box-shadow: 100px 100px 100px rgba(64, 114, 55, 0.9);
 }
 
 .upsilon-title{
-  font-size: 20rem;
+  font-size: 35rem;
   font-weight: 200;
 }
 
 .upsilon-description {
-  font-size: 15rem;
+  font-size: 20rem;
 }
 
 .HD33b {
   width: 1800px;
-  padding: 100px 600px 100px 600px;
+  padding: 100px 800px 100px 1300px;
   text-align: center;
-  font-size: 10rem;
-
+  box-shadow: 60px 60px 60px rgba(64, 114, 55, 0.9);
 }
 
 .HD33b-title{
-  font-size: 14rem;
+  font-size: 16rem;
   font-weight: 200;
 }
 
 .HD33b-description {
-  font-size: 10rem;
-}
-
-.kepler-card-image {
-  grid-area: image;
-  background: url('Screen Shot 2022-12-03 at 8.20.11 PM.png');
-  background-size: cover;
+  font-size: 12rem;
 }
 
 .cancri {
   width: 700px;
-  text-align: center;
-  padding: 50px 80px 40px 80px;
+  text-align: right;
+  padding: 50px 200px 40px 400px;
+  box-shadow: 20px 20px 20px rgba(64, 114, 55, 0.9);
 }
 
 .cancri-title{
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 200;
 }
 
 .cancri-description {
-  font-size: 2rem;
+  font-size: 3.5rem;
 }
 
 .HD606b {
-  width: 100px;
-  padding: 10px 40px 10px 40px;
-  text-align: center;
+  width: 140px;
+  padding: 10px 30px 10px 30px;
+  text-align: right;
+  box-shadow: 10px 10px 10px rgba(64, 114, 55, 0.9);
+
 
 }
 
 .HD606b-title{
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 200;
 }
 
 .HD606b-description {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
 }
 
 .earth {
   width: 300px;
-  padding: 30px 100px 30px 100px;
-  text-align: center;
+  padding: 30px 100px 30px 130px;
+  text-align: right;
+  /* background: rgba(150, 150, 150, 0.5); */
 
 }
 
 .earth-title{
   font-size: 3rem;
   font-weight: 200;
+  color: rgb(122, 203, 0);
 }
 
 .earth-description {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  color: rgb(122, 203, 0);
 }
 
 

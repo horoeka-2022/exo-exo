@@ -18,12 +18,13 @@ export default function Upsilon({ position, args }) {
   function displayCard() {
     if (active === true)
       return (
-        <Html distanceFactor={5} position={[0, 2, 0]}>
+        <Html distanceFactor={5} position={[0, 22, 0]}>
           <div className="card upsilon">
             <div className="flexText">
-              <h2 className="upsilon-title">Upsilon Andromedae b</h2>
+              <h2 className="upsilon-title">Name: Upsilon Andromedae b</h2>
               <p className="upsilon-description">
-                A giant planet composed mainly of gas, it has no solid surface.
+                Description: A giant planet composed mainly of gas, it has no
+                solid surface.
               </p>
             </div>
           </div>
