@@ -1,7 +1,7 @@
 // DAPH'S TEST FOR ENVIRONMNET and 3D MAPPING!!!!
 
-import React, { Suspense, useRef } from 'react'
-// import { Routes, Route } from 'react-router-dom'
+import React, { Suspense } from 'react'
+
 import { extend, Canvas } from '@react-three/fiber'
 import {
   Environment,
@@ -10,24 +10,18 @@ import {
   PerspectiveCamera,
   MeshReflectorMaterial,
 } from '@react-three/drei'
-// import * as THREE from 'three'
-// import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
 import myFont from '../../server/public/fonts/space-quest.json'
-// import PlanetText from '../../server/public/HD80606b.jpg'
 import { DoubleSide } from 'three'
 
 extend({ TextGeometry })
-
-// import Home from './Home'
-// import MainView from './MainView'
 
 function App() {
   const font = new FontLoader().parse(myFont)
 
   return (
-    <Canvas shadows camera={{ position: [0, 0, 12] }}>
+    <Canvas shadows camera={{ position: [-50, 0, 0] }}>
       <Suspense fallback={null}>
         <Stage
           environment={null}
@@ -37,10 +31,10 @@ function App() {
         >
           <Environment
             background={true}
-            files={'../../server/public/HDRI-2.hdr'}
+            files={'../../server/public/hdr/clouds.hdr'}
           />
           {/* title */}
-          <mesh position={[-2.5, 1, 6]}>
+          <mesh position={[-2.5, 10, 6]}>
             <ambientLight intensity={2} />
             <spotLight position={[0, 0, 5]} angle={3} intensity={2} />
             <textGeometry args={['exo exo', { font, size: 1, height: 0.2 }]} />
@@ -52,9 +46,8 @@ function App() {
               depthScale={1}
               minDepthThreshold={0.85}
               color="#151515"
-              metalness={1.6}
+              metalness={1}
               roughness={0.4}
-              position="relative"
               side={DoubleSide}
             />
           </mesh>
