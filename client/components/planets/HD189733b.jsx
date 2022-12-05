@@ -22,7 +22,7 @@ export default function HD33b({ position, args }) {
   function displayCard() {
     if (active === true)
       return (
-        <Html distanceFactor={5} position={[0, 2, 0]}>
+        <Html distanceFactor={5} position={[0, 10, 0]}>
           <div className="card HD33b">
             <div className="flexText">
               <h2 className="HD33b-title">Name: HD 189733 b</h2>

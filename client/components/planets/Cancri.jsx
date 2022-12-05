@@ -17,14 +17,13 @@ export default function Cancri({ position, args }) {
   function displayCard() {
     if (active === true)
       return (
-        <Html distanceFactor={5} position={[0, 2, 0]}>
+        <Html distanceFactor={5} position={[0, 3.5, 0]}>
           <div className="card cancri">
             <div className="flexText">
               <h2 className="cancri-title">Name: 55 Cancri e</h2>
               <p className="cancri-description">
                 Description: A molten surface planet with sparkling silicate
-                skies. Approximately 8 times heavier than Earth with twice the
-                diameter.
+                skies.
               </p>
             </div>
           </div>
