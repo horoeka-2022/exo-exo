@@ -22,15 +22,18 @@ export default function Upsilon({ position, args }) {
           <div className="card">
             <div className="kepler-card-image"></div>
             <div className="card-text"></div>
+
             <span className="date">Discovery: 1996</span>
             <h2>Upsilon Andromedae b</h2>
             <p>
               A giant planet composed mainly of gas, it has no solid surface.
             </p>
+
           </div>
         </Html>
       )
   }
+
   return (
     <mesh
       ref={upsilonRef}
@@ -41,5 +44,6 @@ export default function Upsilon({ position, args }) {
       <sphereGeometry args={args} />
       <meshStandardMaterial map={colorMap} />
     </mesh>
+
   )
 }

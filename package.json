@@ -42,6 +42,7 @@
     "jwks-rsa": "^2.0.4",
     "knex": "^1.0.1",
     "react-redux": "^7.2.5",
+    "react-simple-typewriter": "^5.0.1",
     "react-sound": "^1.2.0"
   },
   "devDependencies": {
