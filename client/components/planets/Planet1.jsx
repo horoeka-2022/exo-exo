@@ -4,7 +4,7 @@ import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import Planet1Map from '../../../server/public/textures/Planet1.jpeg'
 import { useFrame, useLoader } from '@react-three/fiber'
 import '../../../server/public/main.css'
-import Info from '../Info'
+// import Info from '../Info'
 
 export default function Planet({ position, args }) {
   const colorMap = useLoader(TextureLoader, Planet1Map)

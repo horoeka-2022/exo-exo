@@ -26,9 +26,8 @@ export default function Earth({ position, args }) {
         <Html distanceFactor={5} position={[0, 2, 0]}>
           <div className="card">
             <div className="kepler-card-image"></div>
-            <div className="card-text"></div>
-            <span className="date">Discovery: 2011</span>
-            <h2>Kepler 22b</h2>
+            <h2 className="planet-title">Kepler 22b</h2>
+            <h2>Discovery: 2011</h2>
             <p>Super Earth</p>
           </div>
         </Html>
