@@ -2,7 +2,6 @@ import React, { useRef, useState } from 'react'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import UpsilonMap from '../../../server/public/textures/Upsilon.jpeg'
 import { useFrame, useLoader } from '@react-three/fiber'
-import * as THREE from 'three'
 import { Html } from '@react-three/drei'
 
 export default function Upsilon({ position, args }) {
@@ -23,26 +22,28 @@ export default function Upsilon({ position, args }) {
           <div className="card">
             <div className="kepler-card-image"></div>
             <div className="card-text"></div>
-            <span className="date">Discovery: 2011</span>
-            <h2></h2>
-            <p>Super Earth</p>
+
+            <span className="date">Discovery: 1996</span>
+            <h2>Upsilon Andromedae b</h2>
+            <p>
+              A giant planet composed mainly of gas, it has no solid surface.
+            </p>
+
           </div>
         </Html>
       )
   }
 
   return (
-    <>
-      <mesh
-        ref={upsilonRef}
-        position={position}
-        onClick={() => setActive(!active)}
-      >
-        {displayCard()}
+    <mesh
+      ref={upsilonRef}
+      position={position}
+      onClick={() => setActive(!active)}
+    >
+      {displayCard()}
+      <sphereGeometry args={args} />
+      <meshStandardMaterial map={colorMap} />
+    </mesh>
 
-        <sphereGeometry args={args} />
-        <meshStandardMaterial map={colorMap} />
-      </mesh>
-    </>
   )
 }

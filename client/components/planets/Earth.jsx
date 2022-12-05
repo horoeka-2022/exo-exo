@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { Html } from '@react-three/drei'
-import Info from '../Info'
+// import Info from '../Info'
 
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import EarthMap from '../../../server/public/textures/EarthHD.webp'
@@ -19,9 +19,9 @@ export default function Earth({ position, args }) {
       <sphereGeometry args={args} />
       <meshStandardMaterial map={colorMap} />
       <Html distanceFactor={10}>
-        <div className="content">
+        {/* <div className="content">
           <Info />
-        </div>
+        </div> */}
       </Html>
     </mesh>
   )

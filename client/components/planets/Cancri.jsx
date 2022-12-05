@@ -1,8 +1,8 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import CancriMap from '../../../server/public/textures/2k_sun.jpeg'
 import { useFrame, useLoader } from '@react-three/fiber'
-import { Sparkles, MeshRefractionMaterial } from '@react-three/drei'
+import { Sparkles, MeshRefractionMaterial, Html } from '@react-three/drei'
 
 export default function Cancri({ position, args }) {
   const textureMap = useLoader(TextureLoader, CancriMap)
@@ -12,8 +12,29 @@ export default function Cancri({ position, args }) {
     const elapsedTime = clock.getElapsedTime()
     cancriRef.current.rotation.y = elapsedTime / 6
   })
+  const [active, setActive] = useState(false)
+
+  function displayCard() {
+    if (active === true)
+      return (
+        <Html distanceFactor={5} position={[0, 2, 0]}>
+          <div className="card">
+            <div className="kepler-card-image"></div>
+            <div className="card-text"></div>
+            <span className="date">Distance: 40 Light Years</span>
+            <h2>55 Cancri e</h2>
+            <p>Carbon, Nitrogen Oxygen</p>
+          </div>
+        </Html>
+      )
+  }
   return (
-    <mesh ref={cancriRef} position={position}>
+    <mesh
+      ref={cancriRef}
+      position={position}
+      onClick={() => setActive(!active)}
+    >
+      {displayCard()}
       <sphereGeometry args={args} />
       <meshStandardMaterial map={textureMap} scale={5} />
       <Sparkles
