@@ -1,6 +1,7 @@
 import React from 'react'
 import Script from './script'
-import IndicatorBars, { Levels } from './Left-Side'
+import IndicatorBars from './IndicatorBars'
+import Levels from './Levels'
 import { Html } from '@react-three/drei'
 
 export default function HUD() {
@@ -11,23 +12,22 @@ export default function HUD() {
           <div className="left-part information">
             <IndicatorBars />
             <Levels />
-          </div>
-          <div className="levels-information"></div>
-          <div className="right-part information">
-            <ul className="mission-info">
-              <li>
-                <span>MISSION: EXO-EXO</span>
-              </li>
-              <li>
-                <span>SIZE: 5 TEST SUBJECTS</span>
-              </li>
-              <li>
-                <span>TEAM: HOROEKA</span>
-              </li>
-              <li>
-                <span>RANKING: PRETTY DANG COOL</span>
-              </li>
-            </ul>
+            <div className="right-part information">
+              <ul className="mission-info">
+                <li>
+                  <span>MISSION: EXO-EXO</span>
+                </li>
+                <li>
+                  <span>SIZE: 5 TEST SUBJECTS</span>
+                </li>
+                <li>
+                  <span>TEAM: HOROEKA</span>
+                </li>
+                <li>
+                  <span>RANKING: PRETTY DANG COOL</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </body>

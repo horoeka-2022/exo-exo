@@ -208,18 +208,21 @@ canvas {
 .HUDcontainer {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
+  align-items: center;
+  z-index: 1;
   width: 100%;
 }
 
 .information {
   perspective: 400px;
   will-change: transform;
+  z-index: 1;
 }
 
 .indicator-bars {
   display: flex;
   align-items: center;
+  z-index: 1;
 }
 
 .indicator-bars .indicator-bar {
@@ -227,6 +230,7 @@ canvas {
   border: 1px solid #88ff00;
   overflow: hidden;
   opacity: 0.5;
+  z-index: 1;
 }
 
 .indicator-bars .bar .inner-bar {
@@ -235,51 +239,66 @@ canvas {
   margin: 4px;
   background: #88ff00;
   opacity: 0.8;
+  z-index: 1;
 }
 
 .indicator-bars .indicator-bar .bar {
   transform: translateY(calc(100% + 2px));
   will-change: transform;
+  z-index: 1;
 
   animation: gaze-inner-bar-appear 25s;
   animation-fill-mode: forwards;
   animation-timing-function: steps(10, end);
+  z-index: 1;
 }
 
 .indicator-bars .indicator-bar .bar-1 {
   animation-delay: 8s;
+  z-index: 1;
 }
 .indicator-bars .indicator-bar .bar-2 {
   animation-delay: 0s;
+  z-index: 1;
 }
 .indicator-bars .indicator-bar .bar-3 {
   animation-delay: 2s;
+  z-index: 1;
 }
 .indicator-bars .indicator-bar .bar-4 {
   animation-delay: 5s;
+  z-index: 1;
 }
 .indicator-bars .indicator-bar .bar-5 {
+  position: relative;
   animation-delay: 17s;
+  z-index: 1;
 }
 
 
 .indicator-bars ul {
+  position: relative;
   height: 120px;
   margin: 10px;
   padding: 0;
+  z-index: 1;
 }
 
 .indicator-bars ul li {
+  position: relative;
   list-style: none;
   color: #88ff00;
   font-size: 18px;
   text-shadow: 0 0 4px #f5af19;
   opacity: 0.7;
   will-change: opacity;
+  z-index: 1;
 }
 
 ul.levels {
+  position: relative;
   padding: 0;
+  z-index: 1;
 }
 
 ul.levels li {
@@ -291,6 +310,7 @@ ul.levels li {
   text-shadow: 0 0 0 transparent;
   overflow: hidden;
   opacity: 0.45;
+  z-index: 1;
 }
 
 ul.levels li .charge {
@@ -301,6 +321,7 @@ ul.levels li .charge {
   will-change: transform;
   transform-origin: -10px;
   background: #88ff00;
+  z-index: 1;
 }
 
 
@@ -309,14 +330,16 @@ ul.levels li .li-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
 }
 
 ul.levels li .li-content div {
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .levels-information {
+  position: relative;
   width: 300px;
   height: 100px;
   margin-top: 40px;
@@ -325,45 +348,43 @@ ul.levels li .li-content div {
   font-size: 14px;
   opacity: 0;
   will-change: opacity;
+  z-index: 1;
 }
 
 ul.levels li .charge-1 {
+  position: absolute;
   transform: scaleX(0.8) translateY(-15px) translateX(-10px);
+  z-index: 1;
 }
 ul.levels li .charge-2 {
+  position: absolute;
   transform: scaleX(0.7) translateY(-15px) translateX(-10px);
+  z-index: 1;
 }
 ul.levels li .charge-3 {
+  position: absolute;
   transform: scaleX(0.2) translateY(-15px) translateX(-10px);
+  z-index: 1;
 }
 ul.levels li .charge-4 {
+  position: absolute;
   transform: scaleX(0.1) translateY(-15px) translateX(-10px);
+  z-index: 1;
 }
 ul.levels li .charge-5 {
+  position: absolute;
   transform: scaleX(0.6) translateY(-15px) translateX(-10px);
+  z-index: 1;
 }
 
-.levels-information {
-  width: 300px;
-  height: 100px;
-  margin-top: 40px;
-  text-align: center;
-  text-shadow: 0 0 4px #88ff00;
-  font-size: 14px;
-  opacity: 0.8;
-  will-change: opacity;
-}
-
-.right-part {
-  padding-left: 500px;
-
-}
 .right-part ul {
-  /* width: 100%; */
+  position: absolute;
+  width: 100%;
   padding: 10px;
   border: 1px solid #88ff00;
   text-shadow: 0 0 4px #88ff00;
   font-size: 15px;
+  z-index: 1;
 }
 
 @media screen and (max-width: 960px) {

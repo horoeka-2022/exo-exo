@@ -38,8 +38,8 @@ import Planet12 from './planets/Planet12'
 function App() {
   return (
     <>
-      <Music autoLoad={true} />
       <Hud />
+      <Music autoLoad={true} />
       <Canvas camera={{ position: [0, -10, 80], fov: 50 }} dpr={[1, 2]}>
         <spotLight position={[10, 15, 10]} angle={0.3} />
         <OrbitControls
@@ -86,10 +86,10 @@ function App() {
                 />
                 {/* 
                 <Planet1
-                  position={[10, 0, -300]}
-                  args={[28, 32, 32]}
-                  rotation={[0, 5, 5]}
-                /> */}
+                position={[10, 0, -300]}
+                args={[28, 32, 32]}
+                rotation={[0, 5, 5]}
+              /> */}
                 {/* <Planet2 position={[7, -60, 150]} args={[1.2, 32, 32]} />
                 <Planet3 position={[-37, -85, 108]} args={[1.7, 32, 32]} />
                 <Planet4 position={[7, -125, 328]} args={[6, 32, 32]} />
@@ -100,7 +100,7 @@ function App() {
                 <Planet9 position={[-20, 104, 98]} args={[1.4, 32, 32]} />
                 <Planet10 position={[1, -50, -26]} args={[2.1, 32, 32]} />
                 <Planet11 position={[-28, -15, 28]} args={[3.7, 32, 32]} />
-                <Planet12 position={[-20, 10, 90]} args={[1.8, 32, 32]} /> */}
+              <Planet12 position={[-20, 10, 90]} args={[1.8, 32, 32]} /> */}
               </Physics>
             </SelectToZoom>
           </Bounds>
