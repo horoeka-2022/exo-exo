@@ -43,7 +43,7 @@
 {
   "name":"Upsilon Andromedae b (formerly Saffar)",
   "description":"A giant planet composed mainly of gas, it has no solid surface.",
-  "distanceFromEarth":"44 light years, because of it’s proximity to it’s star, temperatures on the sunlit side of the planet range about 1,400 to 1,650 degrees Celsius, the night facing side are thought to range between -20 to 230 degrees Celsius",
+  "distanceFromEarth":"44 light years, ",
   "time": "489 million years",
   "habitability":"no",
   "atmosphere":"clouds of silicates and iron in the upper atmosphere.",

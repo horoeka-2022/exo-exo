@@ -11,7 +11,7 @@ for (let index = 0; index < totalPlanets; index++) {
     color: randomColor(),
     xRadius: (index + 1.5) * 6,
     zRadius: (index + 1.5) * 3,
-    size: random(1, 1.5, 2),
+    size: random(1, 1.5, 2, 2.5),
   })
 }
 

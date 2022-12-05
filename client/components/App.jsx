@@ -2,8 +2,11 @@ import React, { Suspense, useRef } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Music from './Sound'
 
+import Controls from './Controls'
+
 import { Canvas } from '@react-three/fiber'
 import {
+  PerspectiveCamera,
   Bounds,
   ContactShadows,
   Loader,
@@ -46,9 +49,13 @@ function App() {
           minPolarAngle={0}
           maxPolarAngle={Math.PI / 1.75}
           minDistance={2}
+          autoRotate={true}
+          autoRotateSpeed={0.2}
         />
         <Stars count={20000} fade={true} />
         <ambientLight intensity={0.5} />
+        <Controls />
+        <PerspectiveCamera />
         <Suspense fallback={null}>
           {/* <Orbit position={[0, 0, -500]} /> */}
           <Bounds fit clip observe margin={1.2}>
