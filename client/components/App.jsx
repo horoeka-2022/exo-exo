@@ -46,6 +46,7 @@ function App() {
           minPolarAngle={0}
           maxPolarAngle={Math.PI / 1.75}
           minDistance={2}
+          // autoRotate={true}
         />
         <Stars count={20000} fade={true} />
         <ambientLight intensity={0.5} />

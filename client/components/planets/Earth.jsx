@@ -23,9 +23,10 @@ export default function Earth({ position, args }) {
         <Html distanceFactor={5} position={[0, 1, 0]}>
           <div className="card earth">
             <div className="flexText">
-              <h2 className="earth-title">HD 80606 b</h2>
+              <h2 className="earth-title">Name: Earth</h2>
               <p className="earth-description">
-                Earth: home planet. Contains liquid water. Diverse life forms.
+                Description: Home planet. Contains liquid water. Diverse life
+                forms.
               </p>
             </div>
           </div>

@@ -25,8 +25,8 @@ export default function HD33b({ position, args }) {
         <Html distanceFactor={5} position={[0, 2, 0]}>
           <div className="card HD33b">
             <div className="flexText">
-              <h2 className="HD33b-title">HD 189733 b</h2>
-              <p className="HD33b-description">Gas Giant</p>
+              <h2 className="HD33b-title">Name: HD 189733 b</h2>
+              <p className="HD33b-description">Description: Gas Giant</p>
             </div>
           </div>
         </Html>

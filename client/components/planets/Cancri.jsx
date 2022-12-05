@@ -20,10 +20,10 @@ export default function Cancri({ position, args }) {
         <Html distanceFactor={5} position={[0, 2, 0]}>
           <div className="card cancri">
             <div className="flexText">
-              <h2 className="cancri-title">55 Cancri e</h2>
+              <h2 className="cancri-title">Name: 55 Cancri e</h2>
               <p className="cancri-description">
-                A molten surface planet with sparkling silicate skies.
-                Approximately 8 times heavier than Earth with twice the
+                Description: A molten surface planet with sparkling silicate
+                skies. Approximately 8 times heavier than Earth with twice the
                 diameter.
               </p>
             </div>
