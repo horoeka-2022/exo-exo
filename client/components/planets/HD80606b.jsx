@@ -3,6 +3,7 @@ import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import { useFrame, useLoader } from '@react-three/fiber'
 import { OrbitControls, Html } from '@react-three/drei'
 import * as THREE from 'three'
+import Typing from '../Typing'
 
 import HD80606bMap from '../../../server/public/textures/HD80606b.jpg'
 import HD80606bClouds from '../../../server/public/textures/cloudsred.png'
@@ -31,7 +32,8 @@ export default function HD80606b({ position, args }) {
           <div className="card HD606b">
             <div className="flexText">
               <h2 className="HD606b-title">Name: HD80606b</h2>
-              <p className="HD606b-description">Description: lil Gas Giant</p>
+              <p className="HD606b-description"><Typing line={'Description: lil Gas Giant'}/>
+                </p>
             </div>
           </div>
         </Html>

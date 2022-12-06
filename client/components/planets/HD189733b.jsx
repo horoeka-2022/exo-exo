@@ -5,6 +5,7 @@ import HD33bAtmos from '../../../server/public/textures/8k_earth_clouds.png'
 import { useFrame, useLoader } from '@react-three/fiber'
 import * as THREE from 'three'
 import { Html } from '@react-three/drei'
+import Typing from '../Typing'
 
 export default function HD33b({ position, args }) {
   const [colorMap, cloudsMap] = useLoader(TextureLoader, [HD33bMap, HD33bAtmos])
@@ -25,8 +26,12 @@ export default function HD33b({ position, args }) {
         <Html distanceFactor={5} position={[0, 10, 0]}>
           <div className="card HD33b">
             <div className="flexText">
-              <h2 className="HD33b-title">Name: HD 189733 b</h2>
-              <p className="HD33b-description">Description: Gas Giant</p>
+              <h2 className="HD33b-title">
+                <Typing line={'Name: HD 189733 b'} typeSpeed={40} />
+              </h2>
+              <p className="HD33b-description">
+                <Typing line={'Description: Gas Giant'} typeSpeed={60} />
+              </p>
             </div>
           </div>
         </Html>
