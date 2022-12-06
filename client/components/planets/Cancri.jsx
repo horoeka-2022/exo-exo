@@ -34,7 +34,8 @@ export default function Cancri({ position, args }) {
     <mesh
       ref={cancriRef}
       position={position}
-      onClick={() => setActive(!active)}
+      onPointerOver={() => setActive(true)}
+      onPointerOut={() => setActive(false)}
     >
       {displayCard()}
       <sphereGeometry args={args} />

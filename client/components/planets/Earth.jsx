@@ -34,7 +34,12 @@ export default function Earth({ position, args }) {
       )
   }
   return (
-    <mesh ref={earthRef} position={position} onClick={() => setActive(!active)}>
+    <mesh
+      ref={earthRef}
+      position={position}
+      onPointerOver={() => setActive(true)}
+      onPointerOut={() => setActive(false)}
+    >
       {displayCard()}
       <sphereGeometry args={args} />
       <meshStandardMaterial map={colorMap} />

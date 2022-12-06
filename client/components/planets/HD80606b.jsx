@@ -47,7 +47,8 @@ export default function HD80606b({ position, args }) {
       <mesh
         ref={AtmosphereRef}
         position={position}
-        onClick={() => setActive(!active)}
+        onPointerOver={() => setActive(true)}
+        onPointerOut={() => setActive(false)}
       >
         {displayCard()}
         <ambientLight intensity={0.2} />
