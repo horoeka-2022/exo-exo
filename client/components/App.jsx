@@ -9,7 +9,7 @@ import {
   Loader,
   OrbitControls,
   Stars,
-  useBounds,
+  useBounds
 } from '@react-three/drei'
 import Hud from './HUD/Hud'
 import { Physics } from '@react-three/cannon'
@@ -38,10 +38,9 @@ import Planet12 from './planets/Planet12'
 function App() {
   return (
     <>
-      <Music autoLoad={true} />
       <Hud />
       <Canvas camera={{ position: [0, -10, 80], fov: 50 }} dpr={[1, 2]}>
-        <spotLight position={[10, 15, 10]} angle={0.3} />
+        <spotLight position={[10, 10, 10]} angle={0.3} />
         <OrbitControls
           enablePan={false}
           makeDefault
@@ -52,7 +51,7 @@ function App() {
           autoRotateSpeed={0.2}
         />
         <Stars count={20000} fade={true} />
-        <ambientLight intensity={0.5} />
+        {/* <ambientLight intensity={0.2} /> */}
         <Suspense fallback={null}>
           {/* <Orbit position={[0, 0, -500]} /> */}
           <Bounds fit clip observe margin={1.2}>
@@ -63,33 +62,35 @@ function App() {
                   args={[1.875, 32, 32]}
                   rotation={[4, 0, -0]}
                 />
-                <Earth position={[0, 0, 0]} rotation={[1, 1, -2]} />
+                <Earth
+                  position={[0, 0, 0]}
+                  rotation={[1, 1, -2]}
+                  occlude={[false]}
+                />
                 <HD80606b
                   position={[20, 1, -10]}
-                  args={[0.3, 32, 32]}
+                  args={[0.6, 32, 32]}
                   rotation={[1, 0, -1]}
+                  occlude={[false]}
                 />
                 <HD189733b
                   position={[-20, 5, -1]}
                   args={[7, 32, 32]}
                   rotation={[2, 0, 1]}
+                  occlude={[false]}
                 />
                 <Kepler22B
                   position={[18, 15, -25]}
                   args={[2.4, 32, 32]}
                   rotation={[1, 1, 0]}
                 />
-                <Upsilon
-                  position={[0, -40, -50]}
-                  args={[15, 32, 32]}
-                  rotation={[1, 0, 0]}
-                />
+
                 {/* 
                 <Planet1
-                  position={[10, 0, -300]}
-                  args={[28, 32, 32]}
-                  rotation={[0, 5, 5]}
-                /> */}
+                position={[10, 0, -300]}
+                args={[28, 32, 32]}
+                rotation={[0, 5, 5]}
+              /> */}
                 {/* <Planet2 position={[7, -60, 150]} args={[1.2, 32, 32]} />
                 <Planet3 position={[-37, -85, 108]} args={[1.7, 32, 32]} />
                 <Planet4 position={[7, -125, 328]} args={[6, 32, 32]} />
@@ -100,9 +101,14 @@ function App() {
                 <Planet9 position={[-20, 104, 98]} args={[1.4, 32, 32]} />
                 <Planet10 position={[1, -50, -26]} args={[2.1, 32, 32]} />
                 <Planet11 position={[-28, -15, 28]} args={[3.7, 32, 32]} />
-                <Planet12 position={[-20, 10, 90]} args={[1.8, 32, 32]} /> */}
+              <Planet12 position={[-20, 10, 90]} args={[1.8, 32, 32]} /> */}
               </Physics>
             </SelectToZoom>
+            <Upsilon
+              position={[0, -60, -50]}
+              args={[20, 32, 32]}
+              rotation={[1, 0, 0]}
+            />
           </Bounds>
           <ContactShadows
             rotateX={Math.PI / 2}
