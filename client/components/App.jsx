@@ -36,7 +36,6 @@ import Planet9 from './planets/Planet9'
 import Planet10 from './planets/Planet10'
 import Planet11 from './planets/Planet11'
 import Planet12 from './planets/Planet12'
-import SkyBox from './SkyBox'
 
 function App() {
   return (
@@ -45,14 +44,8 @@ function App() {
       <Hud />
       {/* <Orbit position={[-90, 30, -50]} /> */}
       {/* <div style={{ width: '800px', height: '1200px' }}> */}
-      <Canvas
-        dpr={[1, 2]}
-        camera={{ position: [0, -10, 80], fov: 50 }}
-        style={{ background: '{<SkyBox />}', opacity: true }}
-      >
-        {/* <Canvas dpr={[1, 2]} camera={{ fov: 50, position: [5, 5, 5] }}>
-      <Canvas dpr={[1, 2]} camera={{ fov: 50, position: [5, 5, 5] }} background={<Texture args={[whatever]} />}>
-        <Canvas camera={{ position: [20, 80, 10], fov: 30 }} dpr={[1, 2]}> */}
+      <Canvas dpr={[1, 2]} camera={{ position: [0, -10, 80], fov: 50 }}>
+        {/* <Canvas camera={{ position: [20, 80, 10], fov: 30 }} dpr={[1, 2]}>  */}
         {/* <spotLight position={[10, 15, 10]} angle={0.3} /> */}
 
         {/* <OrbitControls

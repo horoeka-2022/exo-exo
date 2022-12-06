@@ -25,12 +25,12 @@ const CameraControls = () => {
       enablePan={false}
       minDistance={2}
       autoRotateSpeed={0.2}
-    //   maxDistance={500}
-    //   makeDefault
-    //   minPolarAngle={0}
-    //   maxPolarAngle={Math.PI / 1.75}
-    //   autoRotate={true}
-    // />
+      maxDistance={480}
+      makeDefault
+      minPolarAngle={0}
+      maxPolarAngle={Math.PI / 1.75}
+      autoRotate={true}
+    />
   )
 }
 
