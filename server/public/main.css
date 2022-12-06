@@ -4,6 +4,10 @@ body{
   color: #00ff26;
 }
 
+.canvasdiv{
+  display: flex;
+  width: fit-content;
+}
 
 .canvas {
   height: 100vh;
@@ -174,7 +178,7 @@ canvas {
   transform: translate3d(calc(50% + 40px), 0, 0);
   text-align: left;
   background: rgba(0, 0, 0, 0.1);
-  color: rgb(243, 78, 229);
+  color: rgb(4, 17, 41);
   font-size: 50px;
   padding: 10px 15px;
   border-radius: 5px;
@@ -193,9 +197,10 @@ canvas {
 
 .HUDBody {
   box-sizing: border-box;
-  padding: 10px;
+  opacity: 68%;
+  padding: 10px;;
   background: black;
-  color: #88ff00;
+  color: #329e15;
   font-family: "Exo", sans-serif;
 }
 

@@ -1,7 +1,8 @@
 import React, { Suspense, useRef } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Music from './Sound'
-
+import Controls from './Controls'
+import CameraControls from './CameraControls'
 import { Canvas } from '@react-three/fiber'
 import {
   Bounds,
@@ -34,28 +35,43 @@ import Planet9 from './planets/Planet9'
 import Planet10 from './planets/Planet10'
 import Planet11 from './planets/Planet11'
 import Planet12 from './planets/Planet12'
+import SkyBox from './SkyBox'
+// import CameraControls from './CameraControls'
 
 function App() {
   return (
     <>
       <Music autoLoad={true} />
       <Hud />
-      <Canvas camera={{ position: [0, -10, 80], fov: 50 }} dpr={[1, 2]}>
-        <spotLight position={[10, 15, 10]} angle={0.3} />
+      {/* <Orbit position={[-90, 30, -50]} /> */}
+      {/* <div style={{ width: '800px', height: '1200px' }}> */}
+      <Canvas
+        dpr={[1, 2]}
+        camera={{ position: [0, -10, 80], fov: 50 }}
+        style={{ background: '{<SkyBox />}', opacity: true }}
+      >
+        {/* <Canvas dpr={[1, 2]} camera={{ fov: 50, position: [5, 5, 5] }}>
+      <Canvas dpr={[1, 2]} camera={{ fov: 50, position: [5, 5, 5] }} background={<Texture args={[whatever]} />}>
+        <Canvas camera={{ position: [20, 80, 10], fov: 30 }} dpr={[1, 2]}> */}
+        {/* <spotLight position={[10, 15, 10]} angle={0.3} /> */}
+
         <OrbitControls
           enablePan={false}
           makeDefault
           minPolarAngle={0}
           maxPolarAngle={Math.PI / 1.75}
           minDistance={2}
+          maxDistance={200}
           autoRotate={true}
           autoRotateSpeed={0.2}
         />
-        <Stars count={20000} fade={true} />
-        <ambientLight intensity={0.5} />
+
+        <Controls />
+        <Stars count={10000} fade={true} />
+        {/* <SkyBox /> */}
+        <ambientLight intensity={0.3} />
         <Suspense fallback={null}>
-          {/* <Orbit position={[0, 0, -500]} /> */}
-          <Bounds fit clip observe margin={1.2}>
+          <Bounds fit clip observe damping={6} margin={1.2}>
             <SelectToZoom>
               <Physics>
                 <Cancri
@@ -115,6 +131,7 @@ function App() {
           />
         </Suspense>
       </Canvas>
+      {/* </div> */}
       <Loader />
     </>
   )
