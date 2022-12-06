@@ -21,7 +21,7 @@ export default function FlatHome() {
           </p>
         </div>
         <div className="button-center">
-          <a href="#">
+          <a href="/main">
             <button className="button-style" onClick={handleClick}>
               enter
             </button>
