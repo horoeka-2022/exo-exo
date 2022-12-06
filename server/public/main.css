@@ -9,13 +9,9 @@
 
 body{
   margin: 0;
-<<<<<<< HEAD
   padding: 0;
-=======
   position: fixed;
-  color: rgba(82, 198, 61, 0.9);
->>>>>>> 2c46d0b3f1155a8a4eb129afc179e6fb97326221
-}
+  color: rgba(82, 198, 61, 0.9);}
 
 .canvas {
   height: 100vh;
