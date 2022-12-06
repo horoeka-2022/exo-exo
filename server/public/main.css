@@ -1,9 +1,8 @@
 body{
   margin: 0;
-  position: fixed;
-  color: #00ff26;
+  padding: 0;
+ 
 }
-
 
 .canvas {
   height: 100vh;
@@ -14,12 +13,14 @@ body{
 .planet-info{
   color: greenyellow;
   display: flex;
-  flex-direction: column;
-  width: 40%;
   font-family: 'VT323', monospace;
   font-size: 40px;
-  margin-bottom: .5em;
+  padding: 10rem;
+  text-align: center;
 }
+
+/* Info card styling  */
+
 .card {
   /* z-index: 10; */
   /* display: flex; */
@@ -140,6 +141,61 @@ body{
   color: rgb(122, 203, 0);
 }
 
+.home-title {
+  margin: 0;
+  font-size: 2rem;
+  position: relative;
+    font-family: 'Space Quest', sans-serif;
+    font-size: 10em;
+    color: #86ddff;
+    animation: animate 1s ease-in-out infinite alternate;
+    padding: 6rem;
+    /* max-width: 100%; */  
+}
+
+@keyframes animate {
+  from{
+   text-shadow: 0 0 30px #2899ab; 
+  }
+  to{
+    text-shadow: 0 0 40px #2899ab,
+                0 0 20px  #2899ab;
+  }
+}
+
+.home-body {
+  margin: 0;
+  background-image: url(./stars-flat.webp);
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+
+}
+
+.centering {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%) 
+}
+
+.title-center{
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%) 
+}
+
+
+
+
+
+/* // HUD Styling below  */
 
 .overlay {
   padding: 40px;
