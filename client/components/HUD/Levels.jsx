@@ -15,7 +15,7 @@ export default function Levels() {
       <li>
         <div className="charge charge-2"></div>
         <div className="li-content">
-          <div>RADIATION</div>
+          <div>RADIATION: </div>
           <div className="cube">
             <div className="dot"></div>
           </div>
