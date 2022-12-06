@@ -2,7 +2,9 @@ import React from 'react'
 import Typing from './Typing'
 
 export default function FlatHome() {
-  function handleClick() {}
+  function handleClick() {
+    return console.log('clicked')
+  }
   return (
     <>
       <div className="home-body">
@@ -18,7 +20,13 @@ export default function FlatHome() {
             />
           </p>
         </div>
-        <button onClick={handleClick}>enter</button>
+        <div className="button-center">
+          <a href="#">
+            <button className="button-style" onClick={handleClick}>
+              enter
+            </button>
+          </a>
+        </div>
       </div>
     </>
   )

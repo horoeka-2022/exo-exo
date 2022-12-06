@@ -1,7 +1,6 @@
 body{
   margin: 0;
   padding: 0;
- 
 }
 
 .canvas {
@@ -146,20 +145,21 @@ body{
   font-size: 2rem;
   position: relative;
     font-family: 'Space Quest', sans-serif;
-    font-size: 10em;
-    color: #86ddff;
+    font-size: 11em;
+    color: rgb(203, 255, 124);
     animation: animate 1s ease-in-out infinite alternate;
     padding: 6rem;
-    /* max-width: 100%; */  
+    letter-spacing: 0.05em;;
 }
 
 @keyframes animate {
   from{
-   text-shadow: 0 0 30px #2899ab; 
+   text-shadow: 0 0 30px rgb(122, 203, 0); 
   }
   to{
-    text-shadow: 0 0 40px #2899ab,
-                0 0 20px  #2899ab;
+    text-shadow: 0 0 70px rgb(122, 203, 0),
+                0 0 30px  rgb(122, 203, 0),
+                0 0 15px rgb(122, 203, 0);
   }
 }
 
@@ -176,14 +176,20 @@ body{
 }
 
 .centering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 50%;
+  top: 58%;
   left: 50%;
   margin-right: -50%;
-  transform: translate(-50%, -50%) 
+  transform: translate(-50%, -50%); 
 }
 
 .title-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 25%;
   left: 50%;
@@ -191,6 +197,38 @@ body{
   transform: translate(-50%, -50%) 
 }
 
+.button-center {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.button-style {
+  border: 2px solid black;
+  border-radius: 10px;
+  color: rgb(203, 255, 124);
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 2.5em;
+  padding: 10px 30px;
+  transition: 0.3s;
+  font-family: 'Space Quest', sans-serif;  
+  letter-spacing: 0.10em;
+}
+
+.button-style:hover {
+  cursor: crosshair;
+  letter-spacing: 0.20em;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgb(122, 203, 0.9),
+              0 0 20px rgb(122, 203, 0.9),
+              0 0 30px rgb(122, 203, 0.9),
+              0 0 70px rgb(122, 203, 0.9);
+}
 
 
 
