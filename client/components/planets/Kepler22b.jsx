@@ -22,7 +22,7 @@ export default function Earth({ position, args }) {
   function displayCard() {
     if (active === true)
       return (
-        <Html distanceFactor={5} position={[0, 2, 0]}>
+        <Html distanceFactor={5} position={[0, 4.5, 0]}>
           <div className="card kepler">
             <div className="flexText">
               <h2 className="planet-title">Name: Kepler 22b</h2>

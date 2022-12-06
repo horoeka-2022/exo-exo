@@ -9,7 +9,7 @@ import {
   Loader,
   OrbitControls,
   Stars,
-  useBounds
+  useBounds,
 } from '@react-three/drei'
 import Hud from './HUD/Hud'
 import { Physics } from '@react-three/cannon'
