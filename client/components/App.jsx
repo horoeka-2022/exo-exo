@@ -9,7 +9,7 @@ import {
   Loader,
   OrbitControls,
   Stars,
-  useBounds,
+  useBounds
 } from '@react-three/drei'
 import Hud from './HUD/Hud'
 import { Physics } from '@react-three/cannon'
@@ -40,7 +40,11 @@ function App() {
     <>
       <Hud />
       <Music autoLoad={true} />
-      <Canvas camera={{ position: [0, -10, 80], fov: 50 }} dpr={[1, 2]}>
+      <Canvas
+        camera={{ position: [0, -10, 80], fov: 50 }}
+        dpr={[1, 2]}
+        occlude={[false]}
+      >
         <spotLight position={[10, 15, 10]} angle={0.3} />
         <OrbitControls
           enablePan={false}
@@ -63,26 +67,34 @@ function App() {
                   args={[1.875, 32, 32]}
                   rotation={[4, 0, -0]}
                 />
-                <Earth position={[0, 0, 0]} rotation={[1, 1, -2]} />
+                <Earth
+                  position={[0, 0, 0]}
+                  rotation={[1, 1, -2]}
+                  occlude={[false]}
+                />
                 <HD80606b
                   position={[20, 1, -10]}
                   args={[0.3, 32, 32]}
                   rotation={[1, 0, -1]}
+                  occlude={[false]}
                 />
                 <HD189733b
                   position={[-20, 5, -1]}
                   args={[7, 32, 32]}
                   rotation={[2, 0, 1]}
+                  occlude={[false]}
                 />
                 <Kepler22B
                   position={[18, 15, -25]}
                   args={[2.4, 32, 32]}
                   rotation={[1, 1, 0]}
+                  occlude={[false]}
                 />
                 <Upsilon
                   position={[0, -40, -50]}
                   args={[15, 32, 32]}
                   rotation={[1, 0, 0]}
+                  occlude={[false]}
                 />
                 {/* 
                 <Planet1
