@@ -1,7 +1,7 @@
 import React, { Suspense, useRef } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Music from './Sound'
-import Controls from './Controls'
+import KeyControls from './KeyControls'
 import CameraControls from './CameraControls'
 import { Canvas } from '@react-three/fiber'
 import {
@@ -12,6 +12,7 @@ import {
   Stars,
   useBounds,
 } from '@react-three/drei'
+
 import Hud from './HUD/Hud'
 import { Physics } from '@react-three/cannon'
 import Earth from './planets/Earth'
@@ -36,7 +37,6 @@ import Planet10 from './planets/Planet10'
 import Planet11 from './planets/Planet11'
 import Planet12 from './planets/Planet12'
 import SkyBox from './SkyBox'
-// import CameraControls from './CameraControls'
 
 function App() {
   return (
@@ -55,7 +55,7 @@ function App() {
         <Canvas camera={{ position: [20, 80, 10], fov: 30 }} dpr={[1, 2]}> */}
         {/* <spotLight position={[10, 15, 10]} angle={0.3} /> */}
 
-        <OrbitControls
+        {/* <OrbitControls
           enablePan={false}
           makeDefault
           minPolarAngle={0}
@@ -64,11 +64,10 @@ function App() {
           maxDistance={200}
           autoRotate={true}
           autoRotateSpeed={0.2}
-        />
-
-        <Controls />
+        /> */}
+        <CameraControls />
+        <KeyControls />
         <Stars count={10000} fade={true} />
-        {/* <SkyBox /> */}
         <ambientLight intensity={0.3} />
         <Suspense fallback={null}>
           <Bounds fit clip observe damping={6} margin={1.2}>
