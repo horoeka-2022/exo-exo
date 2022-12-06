@@ -26,7 +26,10 @@ export default function Earth({ position, args }) {
           <div className="card kepler">
             <div className="flexText">
               <h2 className="planet-title">Name: Kepler 22b</h2>
-              <p className="planet-description">Description: Super Earth</p>
+              <p className="planet-description">
+                Description: Orbiting within the habitable zone of the Sunlike
+                star Kepler-22.
+              </p>
             </div>
           </div>
         </Html>
@@ -35,7 +38,7 @@ export default function Earth({ position, args }) {
   return (
     <>
       <ambientLight intensity={0.4} />
-      <pointLight color="#f6f3ea" position={[2, 0, 5]} intensity={1.2} />
+      {/* <pointLight color="#f6f3ea" position={[2, 0, 5]} intensity={1.2} /> */}
       <mesh ref={KeplerRef} position={position}>
         <sphereGeometry args={args} />
         <meshStandardMaterial map={colorMap} metalness={0.4} roughness={0.7} />

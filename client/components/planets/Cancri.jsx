@@ -3,6 +3,7 @@ import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import CancriMap from '../../../server/public/textures/2k_sun.jpeg'
 import { useFrame, useLoader } from '@react-three/fiber'
 import { Sparkles, MeshRefractionMaterial, Html } from '@react-three/drei'
+import Typing from '../Typing'
 
 export default function Cancri({ position, args }) {
   const textureMap = useLoader(TextureLoader, CancriMap)
@@ -22,8 +23,11 @@ export default function Cancri({ position, args }) {
             <div className="flexText">
               <h2 className="cancri-title">Name: 55 Cancri e</h2>
               <p className="cancri-description">
-                Description: A molten surface planet with sparkling silicate
-                skies.
+                <Typing
+                  line={
+                    'Description: A molten surface planet with sparkling silicate skies.'
+                  }
+                />
               </p>
             </div>
           </div>
