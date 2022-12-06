@@ -52,7 +52,7 @@ export default function HD80606b({ position, args }) {
       >
         {displayCard()}
         <ambientLight intensity={0.2} />
-        <spotLight position={[5, 10, 5]} angle={0.6} intensity={1} />
+        {/* <spotLight position={[5, 10, 5]} angle={0.6} intensity={1} /> */}
         <sphereGeometry args={[0.3015, 32, 32]} />
         <meshStandardMaterial
           map={cloudMap}

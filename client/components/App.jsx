@@ -41,7 +41,7 @@ function App() {
       <Music autoLoad={true} />
       <Hud />
       <Canvas camera={{ position: [0, -10, 80], fov: 50 }} dpr={[1, 2]}>
-        <spotLight position={[10, 15, 10]} angle={0.3} />
+        <spotLight position={[10, 10, 10]} angle={0.3} />
         <OrbitControls
           enablePan={false}
           makeDefault
@@ -52,7 +52,7 @@ function App() {
           autoRotateSpeed={0.2}
         />
         <Stars count={20000} fade={true} />
-        <ambientLight intensity={0.5} />
+        {/* <ambientLight intensity={0.2} /> */}
         <Suspense fallback={null}>
           {/* <Orbit position={[0, 0, -500]} /> */}
           <Bounds fit clip observe margin={1.2}>
@@ -66,7 +66,7 @@ function App() {
                 <Earth position={[0, 0, 0]} rotation={[1, 1, -2]} />
                 <HD80606b
                   position={[20, 1, -10]}
-                  args={[0.3, 32, 32]}
+                  args={[0.6, 32, 32]}
                   rotation={[1, 0, -1]}
                 />
                 <HD189733b
@@ -79,11 +79,7 @@ function App() {
                   args={[2.4, 32, 32]}
                   rotation={[1, 1, 0]}
                 />
-                <Upsilon
-                  position={[0, -40, -50]}
-                  args={[15, 32, 32]}
-                  rotation={[1, 0, 0]}
-                />
+
                 {/* 
                 <Planet1
                   position={[10, 0, -300]}
@@ -103,6 +99,11 @@ function App() {
                 <Planet12 position={[-20, 10, 90]} args={[1.8, 32, 32]} /> */}
               </Physics>
             </SelectToZoom>
+            <Upsilon
+              position={[0, -60, -50]}
+              args={[20, 32, 32]}
+              rotation={[1, 0, 0]}
+            />
           </Bounds>
           <ContactShadows
             rotateX={Math.PI / 2}

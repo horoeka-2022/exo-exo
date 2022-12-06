@@ -35,7 +35,7 @@ export default function Earth({ position, args }) {
   return (
     <>
       <ambientLight intensity={0.4} />
-      <pointLight color="#f6f3ea" position={[2, 0, 5]} intensity={1.2} />
+      {/* <pointLight color="#f6f3ea" position={[2, 0, 5]} intensity={1.2} /> */}
       <mesh ref={KeplerRef} position={position}>
         <sphereGeometry args={args} />
         <meshStandardMaterial map={colorMap} metalness={0.4} roughness={0.7} />
