@@ -26,7 +26,10 @@ export default function Earth({ position, args }) {
           <div className="card kepler">
             <div className="flexText">
               <h2 className="planet-title">Name: Kepler 22b</h2>
-              <p className="planet-description">Description: Super Earth</p>
+              <p className="planet-description">
+                Description: Orbiting within the habitable zone of the Sunlike
+                star Kepler-22.
+              </p>
             </div>
           </div>
         </Html>
