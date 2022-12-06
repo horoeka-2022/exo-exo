@@ -42,9 +42,10 @@ function App() {
     <>
       <Music autoLoad={true} />
       <Hud />
-      {/* <Orbit position={[-90, 30, -50]} /> */}
+
       {/* <div style={{ width: '800px', height: '1200px' }}> */}
       <Canvas dpr={[1, 2]} camera={{ position: [0, -10, 80], fov: 50 }}>
+        <Orbit position={[-90, 30, -50]} />
         {/* <Canvas camera={{ position: [20, 80, 10], fov: 30 }} dpr={[1, 2]}>  */}
         {/* <spotLight position={[10, 15, 10]} angle={0.3} /> */}
 
@@ -60,55 +61,55 @@ function App() {
         /> */}
         <CameraControls />
         <KeyControls />
-        <Stars count={10000} fade={true} />
-        <ambientLight intensity={0.3} />
+        <Stars count={10000} fade={true} radius={500} />
+        <ambientLight intensity={0.2} />
         <Suspense fallback={null}>
           <Bounds fit clip observe damping={6} margin={1.2}>
             <SelectToZoom>
               <Physics>
                 <Cancri
-                  position={[1, 20, -10]}
+                  position={[1, 220, -10]}
                   args={[1.875, 32, 32]}
                   rotation={[4, 0, -0]}
                 />
                 <Earth position={[0, 0, 0]} rotation={[1, 1, -2]} />
                 <HD80606b
-                  position={[20, 1, -10]}
+                  position={[20, -120, 110]}
                   args={[0.3, 32, 32]}
                   rotation={[1, 0, -1]}
                 />
                 <HD189733b
-                  position={[-20, 5, -1]}
+                  position={[-20, 95, -100]}
                   args={[7, 32, 32]}
                   rotation={[2, 0, 1]}
                 />
                 <Kepler22B
-                  position={[18, 15, -25]}
+                  position={[98, 15, -25]}
                   args={[2.4, 32, 32]}
                   rotation={[1, 1, 0]}
                 />
                 <Upsilon
-                  position={[0, -40, -50]}
+                  position={[-100, -40, -50]}
                   args={[15, 32, 32]}
                   rotation={[1, 0, 0]}
                 />
-                {/* 
+
                 <Planet1
                   position={[10, 0, -300]}
                   args={[28, 32, 32]}
                   rotation={[0, 5, 5]}
-                /> */}
-                {/* <Planet2 position={[7, -60, 150]} args={[1.2, 32, 32]} />
+                />
+                <Planet2 position={[7, -160, 150]} args={[1.2, 32, 32]} />
                 <Planet3 position={[-37, -85, 108]} args={[1.7, 32, 32]} />
-                <Planet4 position={[7, -125, 328]} args={[6, 32, 32]} />
+                <Planet4 position={[7, -125, 268]} args={[6, 32, 32]} />
                 <Planet5 position={[-55, -17, -6]} args={[3.1, 32, 32]} />
                 <Planet6 position={[-13, 59, -230]} args={[2.0, 32, 32]} />
-                <Planet7 position={[20, 2, -120]} args={[1.7, 32, 32]} />
+                <Planet7 position={[20, 190, -120]} args={[1.7, 32, 32]} />
                 <Planet8 position={[118, 92, -129]} args={[1.9, 32, 32]} />
                 <Planet9 position={[-20, 104, 98]} args={[1.4, 32, 32]} />
-                <Planet10 position={[1, -50, -26]} args={[2.1, 32, 32]} />
+                <Planet10 position={[200, -50, -26]} args={[2.1, 32, 32]} />
                 <Planet11 position={[-28, -15, 28]} args={[3.7, 32, 32]} />
-                <Planet12 position={[-20, 10, 90]} args={[1.8, 32, 32]} /> */}
+                <Planet12 position={[-20, 10, 90]} args={[1.8, 32, 32]} />
               </Physics>
             </SelectToZoom>
           </Bounds>
@@ -123,7 +124,6 @@ function App() {
           />
         </Suspense>
       </Canvas>
-      {/* </div> */}
       <Loader />
     </>
   )

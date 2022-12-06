@@ -6,7 +6,7 @@ export default function Controls() {
   document.addEventListener('keydown', onDocumentKeyDown, false)
 
   function onDocumentKeyDown(event) {
-    const delta = 1.5
+    const delta = 3
     event = event || window.event
     const keycode = event.keyCode
 
@@ -18,11 +18,11 @@ export default function Controls() {
     // camera.position.y = Math.max(-85, Math.min(85, lon))
 
     switch (keycode) {
-      case 40:
+      case 39:
         camera.position.x += Math.sin(camera.rotation.y - Math.PI / 2) * delta
         camera.position.z += -Math.cos(camera.rotation.y - Math.PI / 2) * delta
         break
-      case 39:
+      case 40:
         camera.position.x += Math.sin(camera.rotation.y) * delta
         camera.position.z += -Math.cos(camera.rotation.y) * delta
         break

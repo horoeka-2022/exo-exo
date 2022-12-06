@@ -30,8 +30,8 @@ function Planet({ planet: { color, xRadius, zRadius, size } }) {
 
   useFrame(({ clock }) => {
     const t = clock.getElapsedTime()
-    const x = xRadius * Math.sin(t / 2)
-    const z = zRadius * Math.cos(t / 2)
+    const x = xRadius * Math.sin(t / 4)
+    const z = zRadius * Math.cos(t / 4)
     planetRef.current.position.x = x
     planetRef.current.position.z = z
   })
@@ -56,7 +56,7 @@ function Lights() {
   )
 }
 
-function Ecliptic({ xRadius = 2, zRadius = 2 }) {
+function Ecliptic({ xRadius = 1, zRadius = 1 }) {
   const points = []
   for (let index = 0; index < 64; index++) {
     const angle = (index / 64) * 2 * Math.PI
@@ -73,7 +73,7 @@ function Ecliptic({ xRadius = 2, zRadius = 2 }) {
       <lineBasicMaterial
         attach="material"
         color="hotpink"
-        linewidth={20}
+        linewidth={10}
         transparent="true"
         opacity={0.5}
       />

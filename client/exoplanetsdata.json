@@ -1,8 +1,8 @@
 [{
   "id": 1,
   "Name":"Earth",
-  "Description":"Earth is the third planet from the Sun and the only astronomical object known to harbor life. About 71% of Earth's surface is made up of the ocean, dwarfing Earth's polar ice, lakes, and rivers.",
-  "Habitable?":"Yes.",
+  "Description":"Earth is the third planet from the Sun and the only astronomical object known to harbor life.",
+  "Habitable":"Yes.",
   "Atmosphere":"Nitrogen, Oxygen, Argon, Carbon Dioxide, Water Vapour.",
   "Temperature": "−89.2 - 56.7 °C",
   "Radius": "6371 km"
@@ -10,9 +10,9 @@
 {
   "id": 2,
   "Name": "55 Cancri e",
-  "Description": "A molten surface planet with sparkling silicate skies. Approximately 8 times heavier than Earth with twice the diameter.",
+  "Description": "Molten surface planet with sparkling silicate skies. Approximately 8 times heavier than Earth.",
   "Distance from Earth": "40 light-years.",
-  "Habitable?":"No",
+  "Habitable":"No",
   "Atmosphere":"Carbon, Nitrogen, Oxygen.",
   "Temperature": "2700 °C",
   "Radius":"1.875 x Earth"
@@ -22,7 +22,7 @@
   "Name":"Kepler 22b",
   "Description":"Super-Earth, thought to be an ocean-like planet.",
   "Distance from Earth":"635 Light-years.",
-  "Habitable?":"Maybe.",
+  "Habitable":"Maybe.",
   "Atmosphere":"Volatile composition with a liquid or gaseous outer shell.",
   "Temperature":"15.5 °C",
   "Radius":"2.4 x Earth"
@@ -51,7 +51,7 @@
 {
   "id": 6,
   "Name":"HD 189733 b",
-  "Description":"The cobalt blue colour comes from a hazy, blow-torched atmosphere containing clouds laced with glass. Winds send the glass storming sideways at 8690 kmh.",
+  "Description":"Cobalt blue blow-torched atmosphere containing clouds laced with glass. Winds up to 8690 km/h.",
   "Distance from Earth":"64 light-years.",
   "Habitable?":"No.",
   "Atmosphere":"Sodium, Potassium, Carbon Dioxide.",

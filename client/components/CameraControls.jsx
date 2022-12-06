@@ -22,13 +22,13 @@ const CameraControls = () => {
       ref={controls}
       args={[camera, domElement]}
       enableZoom={true}
-      enablePan={false}
+      enablePan={true}
       minDistance={2}
-      autoRotateSpeed={0.2}
-      maxDistance={480}
+      autoRotateSpeed={0.15}
+      maxDistance={300}
       makeDefault
       minPolarAngle={0}
-      maxPolarAngle={Math.PI / 1.75}
+      maxPolarAngle={Math.PI / 2}
       autoRotate={true}
     />
   )
