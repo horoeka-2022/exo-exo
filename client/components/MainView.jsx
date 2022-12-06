@@ -4,7 +4,7 @@ import { Canvas } from '@react-three/fiber'
 import {
   Bounds,
   ContactShadows,
-  Loader,
+  Html,
   OrbitControls,
   Stars,
   useBounds,
@@ -18,6 +18,7 @@ import Kepler22B from './planets/Kepler22b'
 import Upsilon from './planets/Upsilon'
 import Cancri from './planets/Cancri'
 import Music from './Sound'
+import Typing from './Typing'
 
 function MainView() {
   return (
@@ -37,7 +38,7 @@ function MainView() {
         />
         <Stars count={20000} fade={true} />
         {/* <ambientLight intensity={0.2} /> */}
-        <Suspense fallback={null}>
+        <Suspense fallback={<Loader />}>
           {/* <Orbit position={[0, 0, -500]} /> */}
           <Bounds fit clip observe margin={1.2}>
             <SelectToZoom>
@@ -88,7 +89,6 @@ function MainView() {
           />
         </Suspense>
       </Canvas>
-      <Loader />
     </>
   )
 }
@@ -104,6 +104,16 @@ function SelectToZoom({ children }) {
     >
       {children}
     </group>
+  )
+}
+
+function Loader() {
+  return (
+    <Html center>
+      <p className="home-type">
+        <Typing line={'loading...'} typeSpeed={5} />
+      </p>
+    </Html>
   )
 }
 

@@ -12,11 +12,12 @@ export default function FlatHome() {
           <h1 className="home-title">exo exo</h1>
         </div>
         <div className="centering">
-          <p>
+          <p className="home-type">
             <Typing
               line={
                 'An exoplanet is any planet beyond our solar system. Most orbit other stars, but free-floating exoplanets, called rogue planets, orbit the galactic center and are untethered to any star.'
               }
+              typeSpeed={10}
             />
           </p>
         </div>

@@ -28,6 +28,8 @@ body{
   text-align: center;
 }
 
+
+
 /* Info card styling  */
 
 .card {
@@ -207,6 +209,13 @@ body{
   transform: translate(-50%, -50%) 
 }
 
+.home-type{
+  color:  rgb(203, 255, 124);;
+  font-family: 'VT323', monospace;
+  font-size:3em;
+  padding: 100px 200px;
+  text-align: center;
+}
 .button-center {
   display: flex;
   justify-content: center;
