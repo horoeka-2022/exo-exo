@@ -44,7 +44,8 @@ export default function Earth({ position, args }) {
       <mesh
         ref={cloudRef}
         position={position}
-        onClick={() => setActive(!active)}
+        onPointerOver={() => setActive(true)}
+        onPointerOut={() => setActive(false)}
       >
         {displayCard()}
 

@@ -36,7 +36,8 @@ export default function Upsilon({ position, args }) {
     <mesh
       ref={upsilonRef}
       position={position}
-      onClick={() => setActive(!active)}
+      onPointerOver={() => setActive(true)}
+      onPointerOut={() => setActive(false)}
     >
       {displayCard()}
       <sphereGeometry args={args} />

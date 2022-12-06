@@ -38,7 +38,8 @@ export default function HD33b({ position, args }) {
       <mesh
         ref={cloudsRef}
         position={position}
-        onClick={() => setActive(!active)}
+        onPointerOver={() => setActive(true)}
+        onPointerOut={() => setActive(false)}
       >
         {displayCard()}
         <sphereGeometry args={[7.035, 32, 32]} />
