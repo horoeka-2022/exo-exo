@@ -193,6 +193,10 @@ canvas {
   background: black;
 }
 
+
+/* HUD */
+
+
 .HUDBody {
   box-sizing: border-box;
   padding: 10px;
@@ -209,20 +213,18 @@ canvas {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1;
-  width: 100%;
+  width: fit-content;
 }
 
 .information {
   perspective: 400px;
+  transform-style: preserve-3d;
   will-change: transform;
-  z-index: 1;
 }
 
 .indicator-bars {
   display: flex;
   align-items: center;
-  z-index: 1;
 }
 
 .indicator-bars .indicator-bar {
@@ -230,7 +232,15 @@ canvas {
   border: 1px solid #88ff00;
   overflow: hidden;
   opacity: 0.5;
-  z-index: 1;
+}
+
+.indicator-bars .indicator-bar .bar {
+  transform: translateY(calc(100% + 2px));
+  will-change: transform;
+
+  animation: vertical-inner-bar-appear 25s;
+  animation-fill-mode: forwards;
+  animation-timing-function: steps(10, end);
 }
 
 .indicator-bars .bar .inner-bar {
@@ -242,75 +252,61 @@ canvas {
   z-index: 1;
 }
 
-.indicator-bars .indicator-bar .bar {
-  transform: translateY(calc(100% + 2px));
-  will-change: transform;
-  z-index: 1;
-
-  animation: gaze-inner-bar-appear 25s;
-  animation-fill-mode: forwards;
-  animation-timing-function: steps(10, end);
-  z-index: 1;
-}
-
-.indicator-bars .indicator-bar .bar-1 {
-  animation-delay: 8s;
-  z-index: 1;
-}
-.indicator-bars .indicator-bar .bar-2 {
-  animation-delay: 0s;
-  z-index: 1;
-}
-.indicator-bars .indicator-bar .bar-3 {
-  animation-delay: 2s;
-  z-index: 1;
-}
-.indicator-bars .indicator-bar .bar-4 {
-  animation-delay: 5s;
-  z-index: 1;
-}
-.indicator-bars .indicator-bar .bar-5 {
-  position: relative;
-  animation-delay: 17s;
-  z-index: 1;
-}
+.indicator-bars .indicator-bars .bar-1 {animation-delay: 8s}
+.indicator-bars .indicator-bars .bar-2 {animation-delay: 0s}
+.indicator-bars .indicator-bars .bar-3 {animation-delay: 2s}
+.indicator-bars .indicator-bars .bar-4 {animation-delay: 5s}
+.indicator-bars .indicator-bars .bar-5 {animation-delay: 17s}
 
 
 .indicator-bars ul {
-  position: relative;
   height: 120px;
   margin: 10px;
   padding: 0;
-  z-index: 1;
+  opacity: 0.9;
 }
 
 .indicator-bars ul li {
-  position: relative;
   list-style: none;
   color: #88ff00;
   font-size: 18px;
   text-shadow: 0 0 4px #f5af19;
   opacity: 0.7;
   will-change: opacity;
-  z-index: 1;
+
+  animation: steps-animated 0s;
+    animation-fill-mode: forwards;
+}
+
+.indicator-bars ul li:nth-child(1) {animation-delay: 33s}
+.indicator-bars ul li:nth-child(2) {animation-delay: 25s}
+.indicator-bars ul li:nth-child(3) {animation-delay: 27s}
+.indicator-bars ul li:nth-child(4) {animation-delay: 30s}
+.indicator-bars ul li:nth-child(5) {animation-delay: 42s}
+
+@keyframes steps-animated
+{
+    100% {opacity: 1;}
+}
+@keyframes vertical-inner-bar-appear
+{
+    100% {transform: translateY(0%)}
 }
 
 ul.levels {
-  position: relative;
   padding: 0;
-  z-index: 1;
 }
 
 ul.levels li {
   position: relative;
   margin: 20px 0;
   width: 300px;
+  padding: 10px;
   border: 1px solid #88ff00;
   color: white;
   text-shadow: 0 0 0 transparent;
   overflow: hidden;
   opacity: 0.45;
-  z-index: 1;
 }
 
 ul.levels li .charge {
@@ -321,25 +317,31 @@ ul.levels li .charge {
   will-change: transform;
   transform-origin: -10px;
   background: #88ff00;
-  z-index: 1;
+
+  animation-name: gaz-level-show;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
 }
+
+ul.levels li .charge-1 { transform: scaleX(0.8) translateY(-15px) translateX(-10px); animation-duration: 266s;}
+ul.levels li .charge-2 { transform: scaleX(0) translateY(-15px) translateX(-10px);   animation-duration: 193s;}
+ul.levels li .charge-3 { transform: scaleX(0.2) translateY(-15px) translateX(-10px); animation-duration: 277s;}
+ul.levels li .charge-4 { transform: scaleX(0.1) translateY(-15px) translateX(-10px); animation-duration: 119s;}
+ul.levels li .charge-5 { transform: scaleX(0.6) translateY(-15px) translateX(-10px); animation-duration: 180s;}
 
 
 ul.levels li .li-content {
-  padding: 10px 0px 10px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1;
 }
 
 ul.levels li .li-content div {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .levels-information {
-  position: relative;
   width: 300px;
   height: 100px;
   margin-top: 40px;
@@ -348,43 +350,44 @@ ul.levels li .li-content div {
   font-size: 14px;
   opacity: 0;
   will-change: opacity;
-  z-index: 1;
 }
 
-ul.levels li .charge-1 {
-  position: absolute;
-  transform: scaleX(0.8) translateY(-15px) translateX(-10px);
-  z-index: 1;
+.levels-information.popping {
+  animation-name: popping-gaz-info;
+  animation-duration: 1s;
+  animation-iteration-count: 3;
+  animation-timing-function: ease-in-out;
 }
-ul.levels li .charge-2 {
-  position: absolute;
-  transform: scaleX(0.7) translateY(-15px) translateX(-10px);
-  z-index: 1;
+
+@keyframes popping-gaz-info
+{
+    0% {    opacity: 0;}
+    50%{    opacity: 1;}
+    100% {  opacity: 0;}
 }
-ul.levels li .charge-3 {
-  position: absolute;
-  transform: scaleX(0.2) translateY(-15px) translateX(-10px);
-  z-index: 1;
+@keyframes gaz-level-show
+{
+    10% {   transform: scaleX(0.6) translateY(-15px) translateX(-10px)}
+    20% {   transform: scaleX(0.2) translateY(-15px) translateX(-10px)}
+    40% {   transform: scaleX(0.5) translateY(-15px) translateX(-10px)}
+    80% {   transform: scaleX(0.8) translateY(-15px) translateX(-10px)}
+    90% {   transform: scaleX(0.3) translateY(-15px) translateX(-10px)}
+    100% {  transform: scaleX(0.6) translateY(-15px) translateX(-10px)}
 }
-ul.levels li .charge-4 {
-  position: absolute;
-  transform: scaleX(0.1) translateY(-15px) translateX(-10px);
-  z-index: 1;
-}
-ul.levels li .charge-5 {
-  position: absolute;
-  transform: scaleX(0.6) translateY(-15px) translateX(-10px);
-  z-index: 1;
+.right-part {
+  display: flex;
+  flex-direction: column;
 }
 
 .right-part ul {
   position: absolute;
-  width: 100%;
+  width: 74%;
   padding: 10px;
   border: 1px solid #88ff00;
   text-shadow: 0 0 4px #88ff00;
   font-size: 15px;
   z-index: 1;
+  opacity: 0.7;
 }
 
 @media screen and (max-width: 960px) {
