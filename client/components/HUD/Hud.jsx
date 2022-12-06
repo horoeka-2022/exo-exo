@@ -1,13 +1,10 @@
 import React from 'react'
-// import Script from './script'
 import IndicatorBars from './IndicatorBars'
 import Levels from './Levels'
-import { Html } from '@react-three/drei'
 
 export default function HUD() {
   return (
     <>
-      <script src="script.js"></script>
       <body className="HUDBody">
         <div className="HUDcontainer">
           <div className="left-part information">

@@ -1,7 +1,7 @@
 body{
   margin: 0;
   position: fixed;
-  color: #00ff26;
+  color: rgba(64, 114, 55, 0.9);
 }
 
 
@@ -199,7 +199,7 @@ canvas {
   box-sizing: border-box;
   padding: 10px;
   background: black;
-  color: #88ff00;
+  color: rgba(64, 114, 55, 0.9);
   font-family: "Exo", sans-serif;
 }
 
@@ -227,9 +227,8 @@ canvas {
 
 .indicator-bars .indicator-bar {
   position: relative;
-  border: 1px solid #88ff00;
+  border: 1px solid rgba(64, 114, 55, 0.9);
   overflow: hidden;
-  opacity: 0.5;
 }
 
 .indicator-bars .indicator-bar .bar {
@@ -238,6 +237,7 @@ canvas {
 
   animation: vertical-inner-bar-appear 25s;
   animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
   animation-timing-function: steps(10, end);
 }
 
@@ -245,8 +245,7 @@ canvas {
   width: 40px;
   height: 8px;
   margin: 4px;
-  background: #88ff00;
-  opacity: 0.8;
+  background: rgba(64, 114, 55, 0.9);
   z-index: 1;
 }
 
@@ -261,19 +260,19 @@ canvas {
   height: 120px;
   margin: 10px;
   padding: 0;
-  opacity: 0.9;
 }
 
 .indicator-bars ul li {
   list-style: none;
-  color: #88ff00;
+  color: rgba(64, 114, 55, 0.9);
   font-size: 18px;
-  text-shadow: 0 0 4px #f5af19;
+  text-shadow: 0 0 4px rgba(59, 157, 42, 0.9);
   opacity: 0.7;
   will-change: opacity;
 
   animation: steps-animated 0s;
     animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
 }
 
 .indicator-bars ul li:nth-child(1) {animation-delay: 33s}
@@ -300,11 +299,11 @@ ul.levels li {
   margin: 20px 0;
   width: 300px;
   padding: 10px;
-  border: 1px solid #88ff00;
+  border: 1px solid rgba(64, 114, 55, 0.9);
   color: white;
   text-shadow: 0 0 0 transparent;
   overflow: hidden;
-  opacity: 0.45;
+  opacity: 0.7;
 }
 
 ul.levels li .charge {
@@ -314,7 +313,7 @@ ul.levels li .charge {
   opacity: 0.7;
   will-change: transform;
   transform-origin: -10px;
-  background: #88ff00;
+  background: rgba(64, 114, 55, 0.9);
 
   animation-name: gaz-level-show;
     animation-iteration-count: infinite;
@@ -344,25 +343,12 @@ ul.levels li .li-content div {
   height: 100px;
   margin-top: 40px;
   text-align: center;
-  text-shadow: 0 0 4px #88ff00;
+  text-shadow: 0 0 4px rgba(64, 114, 55, 0.9);
   font-size: 14px;
   opacity: 0;
   will-change: opacity;
 }
 
-.levels-information.popping {
-  animation-name: popping-gaz-info;
-  animation-duration: 1s;
-  animation-iteration-count: 3;
-  animation-timing-function: ease-in-out;
-}
-
-@keyframes popping-gaz-info
-{
-    0% {    opacity: 0;}
-    50%{    opacity: 1;}
-    100% {  opacity: 0;}
-}
 @keyframes gaz-level-show
 {
     10% {   transform: scaleX(0.6) translateY(-15px) translateX(-10px)}
@@ -381,11 +367,11 @@ ul.levels li .li-content div {
   position: absolute;
   width: 74%;
   padding: 10px;
-  border: 1px solid #88ff00;
-  text-shadow: 0 0 4px #88ff00;
+  border: 1px solid rgba(64, 114, 55, 0.9);
+  text-shadow: 0 0 4px rgba(83, 148, 72, 0.9);
   font-size: 15px;
   z-index: 1;
-  opacity: 0.7;
+  opacity: 1;
 }
 
 @media screen and (max-width: 960px) {
