@@ -9,7 +9,6 @@ export default function HUD() {
         <div className="HUDcontainer">
           <div className="left-part information">
             <IndicatorBars />
-            <Levels />
             <div className="right-part information">
               <ul className="mission-info">
                 <li>
@@ -22,7 +21,13 @@ export default function HUD() {
                   <span>TEAM: HOROEKA</span>
                 </li>
                 <li>
-                  <span>RANKING: PRETTY DANG COOL</span>
+                  <span>NAVIGATION:</span>
+                </li>
+                <li>
+                  <div className="instructions">
+                    <span> - CLICK PLANET TO ZOOM</span>
+                    <span> - HOVER FOR INFORMATION</span>
+                  </div>
                 </li>
               </ul>
             </div>

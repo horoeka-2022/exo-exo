@@ -21,7 +21,7 @@ export default function Earth({ position, args }) {
   function displayCard() {
     if (active === true)
       return (
-        <Html distanceFactor={5} position={[0, 2, 0]}>
+        <Html distanceFactor={5} position={[0, 1.8, 0]}>
           <div className="card earth">
             <div className="flexText">
               <h2 className="earth-title">
