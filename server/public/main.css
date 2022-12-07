@@ -329,7 +329,7 @@ canvas {
   padding: 10px;
   background: black;
   color: rgba(82, 198, 61, 0.9);
-  font-family: "Exo", sans-serif;
+  font-family: 'VT323', monospace; 
 }
 
 .HUDBody ul li{
@@ -371,8 +371,8 @@ canvas {
 }
 
 .indicator-bars .bar .inner-bar {
-  width: 40px;
-  height: 8px;
+  width: 44px;
+  height: 12px;
   margin: 4px;
   background: rgba(82, 198, 61, 0.9);
   z-index: 1;
@@ -386,7 +386,7 @@ canvas {
 
 
 .indicator-bars ul {
-  height: 145px;
+  height: 140px;
   margin: 10px;
   padding: 0;
 }
@@ -394,10 +394,11 @@ canvas {
 .indicator-bars ul li {
   list-style: none;
   color: rgba(82, 198, 61, 0.9);
-  font-size: 26px;
+  font-size: 40px;
   text-shadow: 0 0 4px rgba(59, 157, 42, 0.9);
   opacity: 0.7;
   will-change: opacity;
+  font-family: 'VT323', monospace; 
 
   animation: steps-animated 0s;
     animation-fill-mode: forwards;
@@ -434,6 +435,7 @@ ul.levels li {
   text-shadow: 0 0 0 transparent;
   overflow: hidden;
   font-size: 30px;
+  font-family: 'VT323', monospace; 
 }
 
 ul.levels li .charge {
@@ -477,6 +479,7 @@ ul.levels li .li-content div {
   font-size: 28px;
   opacity: 0;
   will-change: opacity;
+  font-family: 'VT323', monospace; 
 }
 
 @keyframes gaz-level-show
@@ -499,9 +502,10 @@ ul.levels li .li-content div {
   padding: 10px 10px 10px 5px;
   border: 10px solid rgba(82, 198, 61, 0.9);
   text-shadow: 0 0 4px rgba(83, 148, 72, 0.9);
-  font-size: 30px;
+  font-size: 50px;
   z-index: 1;
   opacity: 1;
+  font-family: 'VT323', monospace; 
 }
 
 .right-part ul li {
@@ -595,7 +599,7 @@ ul.levels li .li-content div {
   .indicator-bars ul li {
     list-style: none;
     color: rgba(82, 198, 61, 0.9);
-    font-size: 13px;
+    font-size: 20px;
     text-shadow: 0 0 4px rgba(59, 157, 42, 0.9);
     opacity: 0.7;
     will-change: opacity;
@@ -726,7 +730,7 @@ ul.levels li .li-content div {
     padding: 5px 10px 10px 5px;
     border: 1px solid rgba(82, 198, 61, 0.9);
     text-shadow: 0 0 4px rgba(83, 148, 72, 0.9);
-    font-size: 30px;
+    font-size: 40px;
   }
   
   .right-part ul li {

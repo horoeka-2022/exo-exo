@@ -21,7 +21,13 @@ export default function HUD() {
                   <span>TEAM: HOROEKA</span>
                 </li>
                 <li>
-                  <span>RANKING: PRETTY DANG COOL</span>
+                  <span>NAVIGATION:</span>
+                </li>
+                <li>
+                  <div className="instructions">
+                    <span> - CLICK PLANET TO ZOOM</span>
+                    <span> - HOVER FOR INFORMATION</span>
+                  </div>
                 </li>
               </ul>
             </div>
