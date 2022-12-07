@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Typing from './Typing'
+import { Typewriter } from 'react-simple-typewriter'
 
 export default function FlatHome() {
   function handleClick() {}
@@ -13,12 +13,20 @@ export default function FlatHome() {
         <div className="centering">
           <p className="home-type">
             <div className="home-div">
-              <Typing
-                line={
-                  'An exoplanet is any planet beyond our solar system. Most orbit other stars, but free-floating exoplanets, called rogue planets, orbit the galactic center and are untethered to any star.'
-                }
-                typeSpeed={60}
+              <Typewriter
+                words={[
+                  'An exoplanet is any planet beyond our solar system.',
+                  'Some are more habitable than others...',
+                  'Enter to discover more worlds.',
+                ]}
+                typeSpeed={50}
+                deleteSpeed={20}
+                loop={1}
               />
+              {/* <Typing
+                line={'Enter to discover more worlds beyond our solar system.'}
+                typeSpeed={60}
+              /> */}
             </div>
           </p>
         </div>
