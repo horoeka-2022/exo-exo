@@ -5,6 +5,7 @@ import cloud from '../../../server/public/textures/clouds-texture-png.png'
 import { useFrame, useLoader } from '@react-three/fiber'
 import * as THREE from 'three'
 import { Html } from '@react-three/drei'
+import Typing from '../Typing'
 
 export default function Earth({ position, args }) {
   const [colorMap, cloudsMap] = useLoader(TextureLoader, [Kepler22bMap, cloud])
@@ -25,8 +26,17 @@ export default function Earth({ position, args }) {
         <Html distanceFactor={5} position={[0, 4.5, 0]}>
           <div className="card kepler">
             <div className="flexText">
-              <h2 className="planet-title">Name: Kepler 22b</h2>
-              <p className="planet-description">Description: Super Earth</p>
+              <h2 className="planet-title">
+                <Typing line={'Name: Kepler 22b'} typeSpeed={50} />
+              </h2>
+              <p className="planet-description">
+                <Typing
+                  line={
+                    'Description: Orbiting within the habitable zone of the Sunlike star Kepler-22.'
+                  }
+                  typeSpeed={60}
+                />
+              </p>
             </div>
           </div>
         </Html>
@@ -35,7 +45,7 @@ export default function Earth({ position, args }) {
   return (
     <>
       <ambientLight intensity={0.4} />
-      <pointLight color="#f6f3ea" position={[2, 0, 5]} intensity={1.2} />
+      {/* <pointLight color="#f6f3ea" position={[2, 0, 5]} intensity={1.2} /> */}
       <mesh ref={KeplerRef} position={position}>
         <sphereGeometry args={args} />
         <meshStandardMaterial map={colorMap} metalness={0.4} roughness={0.7} />
@@ -44,7 +54,8 @@ export default function Earth({ position, args }) {
       <mesh
         ref={cloudRef}
         position={position}
-        onClick={() => setActive(!active)}
+        onPointerOver={() => setActive(true)}
+        onPointerOut={() => setActive(false)}
       >
         {displayCard()}
 

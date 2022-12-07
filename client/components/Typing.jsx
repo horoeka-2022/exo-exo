@@ -1,11 +1,9 @@
 import React from 'react'
 import { Typewriter } from 'react-simple-typewriter'
 
-function Typing({ line }) {
+function Typing({ line, typeSpeed }) {
   return (
-    <div className="planet-info">
-      <Typewriter words={[line]} typeSpeed={50} className="info-line" />
-    </div>
+    <Typewriter words={[line]} typeSpeed={typeSpeed} className="planet-info" />
   )
 }
 

@@ -1,8 +1,17 @@
+*.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 body{
   margin: 0;
   padding: 0;
- 
-}
+  position: fixed;
+  color: rgba(82, 198, 61, 0.9);}
 
 .canvas {
   height: 100vh;
@@ -11,13 +20,15 @@ body{
 }
 
 .planet-info{
-  color: greenyellow;
+  color: rgba(82, 198, 61, 0.9);
   display: flex;
   font-family: 'VT323', monospace;
   font-size: 40px;
   padding: 10rem;
   text-align: center;
 }
+
+
 
 /* Info card styling  */
 
@@ -28,10 +39,10 @@ body{
   grid-template-rows: 300px 250px 250px;
   grid-template-areas: 'image' 'text'; */
   background: rgba(0, 0, 0, 0.1);
-  box-shadow: 15px 15px 15px rgba(64, 114, 55, 0.9);
+  box-shadow: 15px 15px 15px rgba(82, 198, 61, 0.9);
   font-family: 'VT323', monospace; 
   /* text-align: center; */
-  color: rgb(122, 203, 0);
+  color: rgba(82, 198, 61, 0.9);
   font-size: auto;
   font-weight: 200;
 }
@@ -60,7 +71,7 @@ body{
   width: 5000px;
   text-align: right;
   padding: 200px 1000px 500px 3000px;
-  box-shadow: 100px 100px 100px rgba(64, 114, 55, 0.9);
+  box-shadow: 100px 100px 100px rgba(82, 198, 61, 0.9);
 }
 
 .upsilon-title{
@@ -76,7 +87,7 @@ body{
   width: 1800px;
   padding: 100px 800px 100px 1300px;
   text-align: center;
-  box-shadow: 60px 60px 60px rgba(64, 114, 55, 0.9);
+  box-shadow: 60px 60px 60px rgba(82, 198, 61, 0.9);
 }
 
 .HD33b-title{
@@ -92,7 +103,7 @@ body{
   width: 700px;
   text-align: right;
   padding: 50px 200px 40px 400px;
-  box-shadow: 20px 20px 20px rgba(64, 114, 55, 0.9);
+  box-shadow: 20px 20px 20px rgba(82, 198, 61, 0.9);
 }
 
 .cancri-title{
@@ -108,7 +119,7 @@ body{
   width: 140px;
   padding: 10px 30px 10px 30px;
   text-align: right;
-  box-shadow: 10px 10px 10px rgba(64, 114, 55, 0.9);
+  box-shadow: 10px 10px 10px rgba(82, 198, 61, 0.9);
 
 
 }
@@ -146,20 +157,21 @@ body{
   font-size: 2rem;
   position: relative;
     font-family: 'Space Quest', sans-serif;
-    font-size: 10em;
-    color: #86ddff;
+    font-size: 11em;
+    color: rgb(203, 255, 124);
     animation: animate 1s ease-in-out infinite alternate;
     padding: 6rem;
-    /* max-width: 100%; */  
+    letter-spacing: 0.05em;;
 }
 
 @keyframes animate {
   from{
-   text-shadow: 0 0 30px #2899ab; 
+   text-shadow: 0 0 30px rgb(122, 203, 0); 
   }
   to{
-    text-shadow: 0 0 40px #2899ab,
-                0 0 20px  #2899ab;
+    text-shadow: 0 0 70px rgb(122, 203, 0),
+                0 0 30px  rgb(122, 203, 0),
+                0 0 15px rgb(122, 203, 0);
   }
 }
 
@@ -172,23 +184,75 @@ body{
   background-position: center;
   width: 100%;
   height: 100%;
-
 }
 
+
 .centering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 50%;
   left: 50%;
   margin-right: -50%;
-  transform: translate(-50%, -50%) 
+  transform: translate(-50%, -50%); 
 }
 
 .title-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 25%;
+  top: 20%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%) 
+}
+
+.home-type{
+  color:  rgb(153, 255, 0);
+  font-family: 'VT323', monospace;
+  font-size:2.5em;
+  padding: 100px 450px;
+  text-align: center;
+}
+
+.home-div{
+  background-color: rgb(214, 214, 214, 0.4);
+  padding: 50px;
+  border-radius: 10px;
+}
+.button-center {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.button-style {
+  border: 2px solid black;
+  border-radius: 10px;
+  color: rgb(203, 255, 124);
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 4em;
+  padding: 20px 60px;
+  transition: 0.3s;
+  font-family: 'Space Quest', sans-serif;  
+  letter-spacing: 0.10em;
+}
+
+.button-style:hover {
+  cursor: crosshair;
+  letter-spacing: 0.20em;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgb(122, 203, 0.9),
+              0 0 20px rgb(122, 203, 0.9),
+              0 0 30px rgb(122, 203, 0.9),
+              0 0 70px rgb(122, 203, 0.9);
 }
 
 
@@ -247,11 +311,15 @@ canvas {
   background: black;
 }
 
+
+/* HUD */
+
+
 .HUDBody {
   box-sizing: border-box;
   padding: 10px;
   background: black;
-  color: #88ff00;
+  color: rgba(82, 198, 61, 0.9);
   font-family: "Exo", sans-serif;
 }
 
@@ -262,12 +330,13 @@ canvas {
 .HUDcontainer {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
-  width: 100%;
+  align-items: center;
+  width: fit-content;
 }
 
 .information {
-  perspective: 400px;
+  perspective: 800px;
+  transform-style: preserve-3d;
   will-change: transform;
 }
 
@@ -278,58 +347,67 @@ canvas {
 
 .indicator-bars .indicator-bar {
   position: relative;
-  border: 1px solid #88ff00;
+  border: 1px solid rgba(82, 198, 61, 0.9);
   overflow: hidden;
-  opacity: 0.5;
-}
-
-.indicator-bars .bar .inner-bar {
-  width: 40px;
-  height: 8px;
-  margin: 4px;
-  background: #88ff00;
-  opacity: 0.8;
 }
 
 .indicator-bars .indicator-bar .bar {
   transform: translateY(calc(100% + 2px));
   will-change: transform;
 
-  animation: gaze-inner-bar-appear 25s;
+  animation: vertical-inner-bar-appear 25s;
   animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
   animation-timing-function: steps(10, end);
 }
 
-.indicator-bars .indicator-bar .bar-1 {
-  animation-delay: 8s;
+.indicator-bars .bar .inner-bar {
+  width: 40px;
+  height: 8px;
+  margin: 4px;
+  background: rgba(82, 198, 61, 0.9);
+  z-index: 1;
 }
-.indicator-bars .indicator-bar .bar-2 {
-  animation-delay: 0s;
-}
-.indicator-bars .indicator-bar .bar-3 {
-  animation-delay: 2s;
-}
-.indicator-bars .indicator-bar .bar-4 {
-  animation-delay: 5s;
-}
-.indicator-bars .indicator-bar .bar-5 {
-  animation-delay: 17s;
-}
+
+.indicator-bars .indicator-bars .bar-1 {animation-delay: 8s}
+.indicator-bars .indicator-bars .bar-2 {animation-delay: 0s}
+.indicator-bars .indicator-bars .bar-3 {animation-delay: 2s}
+.indicator-bars .indicator-bars .bar-4 {animation-delay: 5s}
+.indicator-bars .indicator-bars .bar-5 {animation-delay: 17s}
 
 
 .indicator-bars ul {
-  height: 120px;
+  height: 145px;
   margin: 10px;
   padding: 0;
 }
 
 .indicator-bars ul li {
   list-style: none;
-  color: #88ff00;
-  font-size: 18px;
-  text-shadow: 0 0 4px #f5af19;
+  color: rgba(82, 198, 61, 0.9);
+  font-size: 26px;
+  text-shadow: 0 0 4px rgba(59, 157, 42, 0.9);
   opacity: 0.7;
   will-change: opacity;
+
+  animation: steps-animated 0s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.indicator-bars ul li:nth-child(1) {animation-delay: 33s}
+.indicator-bars ul li:nth-child(2) {animation-delay: 25s}
+.indicator-bars ul li:nth-child(3) {animation-delay: 27s}
+.indicator-bars ul li:nth-child(4) {animation-delay: 30s}
+.indicator-bars ul li:nth-child(5) {animation-delay: 42s}
+
+@keyframes steps-animated
+{
+    100% {opacity: 1;}
+}
+@keyframes vertical-inner-bar-appear
+{
+    100% {transform: translateY(0%)}
 }
 
 ul.levels {
@@ -338,13 +416,15 @@ ul.levels {
 
 ul.levels li {
   position: relative;
-  margin: 20px 0;
-  width: 300px;
-  border: 1px solid #88ff00;
+  margin: 10px 0;
+  width: 400px;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid rgba(82, 198, 61, 0.9);
   color: white;
   text-shadow: 0 0 0 transparent;
   overflow: hidden;
-  opacity: 0.45;
+  font-size: 30px;
 }
 
 ul.levels li .charge {
@@ -354,12 +434,21 @@ ul.levels li .charge {
   opacity: 0.7;
   will-change: transform;
   transform-origin: -10px;
-  background: #88ff00;
+  background: rgba(82, 198, 61, 0.9);
+
+  animation-name: gaz-level-show;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
 }
+
+ul.levels li .charge-1 { transform: scaleX(0.8) translateY(-15px) translateX(-10px); animation-duration: 266s;}
+ul.levels li .charge-2 { transform: scaleX(0) translateY(-15px) translateX(-10px);   animation-duration: 193s;}
+ul.levels li .charge-3 { transform: scaleX(0.2) translateY(-15px) translateX(-10px); animation-duration: 277s;}
+ul.levels li .charge-4 { transform: scaleX(0.1) translateY(-15px) translateX(-10px); animation-duration: 119s;}
+ul.levels li .charge-5 { transform: scaleX(0.6) translateY(-15px) translateX(-10px); animation-duration: 180s;}
 
 
 ul.levels li .li-content {
-  padding: 10px 0px 10px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -371,53 +460,43 @@ ul.levels li .li-content div {
 }
 
 .levels-information {
-  width: 300px;
+  width: 600x;
   height: 100px;
   margin-top: 40px;
   text-align: center;
-  text-shadow: 0 0 4px #88ff00;
-  font-size: 14px;
+  text-shadow: 0 0 4px rgba(82, 198, 61, 0.9);
+  font-size: 28px;
   opacity: 0;
   will-change: opacity;
 }
 
-ul.levels li .charge-1 {
-  transform: scaleX(0.8) translateY(-15px) translateX(-10px);
+@keyframes gaz-level-show
+{
+    10% {   transform: scaleX(0.6) translateY(-15px) translateX(-10px)}
+    20% {   transform: scaleX(0.2) translateY(-15px) translateX(-10px)}
+    40% {   transform: scaleX(0.5) translateY(-15px) translateX(-10px)}
+    80% {   transform: scaleX(0.8) translateY(-15px) translateX(-10px)}
+    90% {   transform: scaleX(0.3) translateY(-15px) translateX(-10px)}
+    100% {  transform: scaleX(0.6) translateY(-15px) translateX(-10px)}
 }
-ul.levels li .charge-2 {
-  transform: scaleX(0.7) translateY(-15px) translateX(-10px);
-}
-ul.levels li .charge-3 {
-  transform: scaleX(0.2) translateY(-15px) translateX(-10px);
-}
-ul.levels li .charge-4 {
-  transform: scaleX(0.1) translateY(-15px) translateX(-10px);
-}
-ul.levels li .charge-5 {
-  transform: scaleX(0.6) translateY(-15px) translateX(-10px);
-}
-
-.levels-information {
-  width: 300px;
-  height: 100px;
-  margin-top: 40px;
-  text-align: center;
-  text-shadow: 0 0 4px #88ff00;
-  font-size: 14px;
-  opacity: 0.8;
-  will-change: opacity;
-}
-
 .right-part {
-  padding-left: 500px;
-
+  display: flex;
+  flex-direction: column;
 }
+
 .right-part ul {
-  /* width: 100%; */
-  padding: 10px;
-  border: 1px solid #88ff00;
-  text-shadow: 0 0 4px #88ff00;
-  font-size: 15px;
+  position: absolute;
+  width: 90%;
+  padding: 10px 10px 10px 5px;
+  border: 1px solid rgba(82, 198, 61, 0.9);
+  text-shadow: 0 0 4px rgba(83, 148, 72, 0.9);
+  font-size: 30px;
+  z-index: 1;
+  opacity: 1;
+}
+
+.right-part ul li {
+  padding: 10px 10px 10px 5px;
 }
 
 @media screen and (max-width: 960px) {

@@ -3,6 +3,7 @@ import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import CancriMap from '../../../server/public/textures/2k_sun.jpeg'
 import { useFrame, useLoader } from '@react-three/fiber'
 import { Sparkles, MeshRefractionMaterial, Html } from '@react-three/drei'
+import Typing from '../Typing'
 
 export default function Cancri({ position, args }) {
   const textureMap = useLoader(TextureLoader, CancriMap)
@@ -20,10 +21,16 @@ export default function Cancri({ position, args }) {
         <Html distanceFactor={5} position={[0, 3.5, 0]}>
           <div className="card cancri">
             <div className="flexText">
-              <h2 className="cancri-title">Name: 55 Cancri e</h2>
+              <h2 className="cancri-title">
+                <Typing line={'Name: 55 Cancri e'} typeSpeed={50} />
+              </h2>
               <p className="cancri-description">
-                Description: A molten surface planet with sparkling silicate
-                skies.
+                <Typing
+                  line={
+                    'Description: A molten surface planet with sparkling silicate skies.'
+                  }
+                  typeSpeed={60}
+                />
               </p>
             </div>
           </div>
@@ -34,7 +41,8 @@ export default function Cancri({ position, args }) {
     <mesh
       ref={cancriRef}
       position={position}
-      onClick={() => setActive(!active)}
+      onPointerOver={() => setActive(true)}
+      onPointerOut={() => setActive(false)}
     >
       {displayCard()}
       <sphereGeometry args={args} />

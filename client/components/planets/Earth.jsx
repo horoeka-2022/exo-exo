@@ -5,6 +5,7 @@ import { Html } from '@react-three/drei'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import EarthMap from '../../../server/public/textures/EarthHD.webp'
 import { useFrame, useLoader } from '@react-three/fiber'
+import Typing from '../Typing'
 
 export default function Earth({ position, args }) {
   const colorMap = useLoader(TextureLoader, EarthMap)
@@ -23,10 +24,16 @@ export default function Earth({ position, args }) {
         <Html distanceFactor={5} position={[0, 2, 0]}>
           <div className="card earth">
             <div className="flexText">
-              <h2 className="earth-title">Name: Earth</h2>
+              <h2 className="earth-title">
+                <Typing line={'Name: Earth'} typeSpeed={50} />
+              </h2>
               <p className="earth-description">
-                Description: Home planet. Contains liquid water. Diverse life
-                forms.
+                <Typing
+                  line={
+                    'Description: Home planet. Contains liquid water. Diverse life forms.'
+                  }
+                  typeSpeed={60}
+                />
               </p>
             </div>
           </div>
@@ -34,7 +41,12 @@ export default function Earth({ position, args }) {
       )
   }
   return (
-    <mesh ref={earthRef} position={position} onClick={() => setActive(!active)}>
+    <mesh
+      ref={earthRef}
+      position={position}
+      onPointerOver={() => setActive(true)}
+      onPointerOut={() => setActive(false)}
+    >
       {displayCard()}
       <sphereGeometry args={args} />
       <meshStandardMaterial map={colorMap} />
