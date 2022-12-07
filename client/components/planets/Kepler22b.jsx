@@ -34,8 +34,17 @@ export default function Earth({ position, args }) {
                   line={
                     'Description: Orbiting within the habitable zone of the Sunlike star Kepler-22.'
                   }
-                  typeSpeed={60}
+                  typeSpeed={70}
                 />
+              </p>
+              <p className="kepler-description">
+                <Typing
+                  line={'Distance from Earth: 635 Light-years.'}
+                  typeSpeed={150}
+                />
+              </p>
+              <p className="kepler-description">
+                <Typing line={'Temperature: 15.5 °C'} typeSpeed={280} />
               </p>
             </div>
           </div>

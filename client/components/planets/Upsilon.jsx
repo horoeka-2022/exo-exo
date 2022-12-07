@@ -29,15 +29,24 @@ export default function Upsilon({ position, args }) {
           <div className="card upsilon">
             <div className="flexText">
               <h2 className="upsilon-title">
-                <Typing line={'Name: Upsilon Andromedae b'} typeSpeed={50} />
+                <Typing line={'Name: Upsilon Andromedae b'} typeSpeed={70} />
               </h2>
               <p className="upsilon-description">
                 <Typing
                   line={
                     'Description: A giant planet composed mainly of gas, it has no solid surface.'
                   }
-                  typeSpeed={60}
+                  typeSpeed={70}
                 />
+                <p className="upsilon-description">
+                  <Typing
+                    line={'Distance from Earth: 44 light years.'}
+                    typeSpeed={150}
+                  />
+                </p>
+                <p className="upsilon-description">
+                  <Typing line={'Temperature: 5939.85 °C'} typeSpeed={220} />
+                </p>
               </p>
             </div>
           </div>
