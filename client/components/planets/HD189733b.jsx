@@ -29,8 +29,23 @@ export default function HD33b({ position, args }) {
               <h2 className="HD33b-title">
                 <Typing line={'Name: HD 189733 b'} typeSpeed={50} />
               </h2>
+
               <p className="HD33b-description">
-                <Typing line={'Description: Gas Giant'} typeSpeed={60} />
+                <Typing
+                  line={
+                    'Description: The cobalt blue colour comes from a hazy, blow-torched atmosphere containing clouds laced with glass. Winds send the glass storming sideways at 8690 kmh.'
+                  }
+                  typeSpeed={40}
+                />
+                <p className="HD33b-description">
+                  <Typing
+                    line={'Distance from Earth: 64 light-years.'}
+                    typeSpeed={150}
+                  />
+                </p>
+                <p className="HD33b-description">
+                  <Typing line={'Temperature: 935.85 °C'} typeSpeed={220} />
+                </p>
               </p>
             </div>
           </div>

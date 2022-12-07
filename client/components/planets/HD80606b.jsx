@@ -34,8 +34,26 @@ export default function HD80606b({ position, args }) {
               <h2 className="HD606b-title">
                 <Typing line={'Name: HD80606b'} typeSpeed={50} />
               </h2>
+
               <p className="HD606b-description">
-                <Typing line={'Description: lil Gas Giant'} typeSpeed={60} />
+                <Typing
+                  line={
+                    'Description: Storms, rotation, atmospheric heating, and a volatile orbit are all plainly visible.'
+                  }
+                  typeSpeed={70}
+                />
+                <p className="HD606b-description">
+                  <Typing
+                    line={'Distance from Earth: 1,150 light-years.'}
+                    typeSpeed={150}
+                  />
+                </p>
+                <p className="HD606b-description">
+                  <Typing
+                    line={'Temperature: 500 - 1226.85 °C'}
+                    typeSpeed={220}
+                  />
+                </p>
               </p>
             </div>
           </div>

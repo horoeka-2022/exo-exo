@@ -32,8 +32,20 @@ export default function Earth({ position, args }) {
                   line={
                     'Description: Home planet. Contains liquid water. Diverse life forms.'
                   }
-                  typeSpeed={60}
+                  typeSpeed={100}
                 />
+                <p className="earth-description">
+                  <Typing
+                    line={'Distance from Earth: 0 light-years.'}
+                    typeSpeed={150}
+                  />
+                </p>
+                <p className="earth-description">
+                  <Typing
+                    line={'Temperature: −89.2 - 56.7 °C'}
+                    typeSpeed={220}
+                  />
+                </p>
               </p>
             </div>
           </div>

@@ -85,8 +85,8 @@ body{
 
 .HD33b {
   width: 1800px;
-  padding: 100px 800px 100px 1300px;
-  text-align: center;
+  padding: 100px 900px 100px 1300px;
+  text-align: right;
   box-shadow: 60px 60px 60px rgba(82, 198, 61, 0.9);
 }
 
@@ -117,7 +117,7 @@ body{
 
 .HD606b {
   width: 140px;
-  padding: 10px 30px 10px 30px;
+  padding: 10px 30px 10px 80px;
   text-align: right;
   box-shadow: 10px 10px 10px rgba(82, 198, 61, 0.9);
 
@@ -125,17 +125,18 @@ body{
 }
 
 .HD606b-title{
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 200;
 }
 
 .HD606b-description {
-  font-size: 0.8rem;
+  font-size: 1rem;
+
 }
 
 .earth {
   width: 300px;
-  padding: 30px 100px 30px 130px;
+  padding: 30px 100px 30px 200px;
   text-align: right;
   /* background: rgba(150, 150, 150, 0.5); */
 
