@@ -22,15 +22,24 @@ export default function Cancri({ position, args }) {
           <div className="card cancri">
             <div className="flexText">
               <h2 className="cancri-title">
-                <Typing line={'Name: 55 Cancri e'} typeSpeed={50} />
+                <Typing line={'Name: 55 Cancri e'} typeSpeed={70} />
               </h2>
               <p className="cancri-description">
                 <Typing
                   line={
                     'Description: A molten surface planet with sparkling silicate skies.'
                   }
-                  typeSpeed={60}
+                  typeSpeed={100}
                 />
+                <p className="cancri-description">
+                  <Typing
+                    line={'Distance from Earth: 40 light-years.'}
+                    typeSpeed={150}
+                  />
+                </p>
+                <p className="cancri-description">
+                  <Typing line={'Temperature: 2700 °C'} typeSpeed={220} />
+                </p>
               </p>
             </div>
           </div>
