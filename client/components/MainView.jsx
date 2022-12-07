@@ -111,7 +111,8 @@ function Loader() {
   return (
     <Html center>
       <p className="home-type">
-        <Typing line={'loading...'} typeSpeed={5} />
+        loading...
+        {/* <Typing line={'loading...'} typeSpeed={1} /> */}
       </p>
     </Html>
   )
