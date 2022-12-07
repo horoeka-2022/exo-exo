@@ -37,13 +37,13 @@ export default function Earth({ position, args }) {
                   typeSpeed={60}
                 />
               </p>
-              <p className="cancri-description">
+              <p className="kepler-description">
                 <Typing
                   line={'Distance from Earth: 635 Light-years.'}
                   typeSpeed={150}
                 />
               </p>
-              <p className="cancri-description">
+              <p className="kepler-description">
                 <Typing line={'Temperature: 15.5 °C'} typeSpeed={220} />
               </p>
             </div>

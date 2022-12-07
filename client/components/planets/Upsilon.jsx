@@ -38,13 +38,13 @@ export default function Upsilon({ position, args }) {
                   }
                   typeSpeed={100}
                 />
-                <p className="cancri-description">
+                <p className="upsilon-description">
                   <Typing
                     line={'Distance from Earth: 44 light years.'}
                     typeSpeed={150}
                   />
                 </p>
-                <p className="cancri-description">
+                <p className="upsilon-description">
                   <Typing line={'Temperature: 5939.85 °C'} typeSpeed={220} />
                 </p>
               </p>
