@@ -3,9 +3,7 @@ import { Typewriter } from 'react-simple-typewriter'
 
 function Typing({ line, typeSpeed }) {
   return (
-    
-      <Typewriter words={[line]} typeSpeed={typeSpeed} className="info-line" />
-    
+    <Typewriter words={[line]} typeSpeed={typeSpeed} className="planet-info" />
   )
 }
 
