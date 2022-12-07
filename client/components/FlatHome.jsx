@@ -22,6 +22,7 @@ export default function FlatHome() {
                 typeSpeed={50}
                 deleteSpeed={20}
                 loop={1}
+                delaySpeed={2500}
               />
               {/* <Typing
                 line={'Enter to discover more worlds beyond our solar system.'}
