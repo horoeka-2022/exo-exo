@@ -6,6 +6,7 @@ import cloudsMap from '../../../server/public/textures/cloudsred.png'
 import { useFrame, useLoader } from '@react-three/fiber'
 import { Html } from '@react-three/drei'
 import * as THREE from 'three'
+import Typing from '../Typing'
 
 export default function Upsilon({ position, args }) {
   const [colorMap, cloudMap] = useLoader(TextureLoader, [UpsilonMap, cloudsMap])
@@ -27,10 +28,16 @@ export default function Upsilon({ position, args }) {
         <Html distanceFactor={5} position={[0, 22, 0]}>
           <div className="card upsilon">
             <div className="flexText">
-              <h2 className="upsilon-title">Name: Upsilon Andromedae b</h2>
+              <h2 className="upsilon-title">
+                <Typing line={'Name: Upsilon Andromedae b'} typeSpeed={50} />
+              </h2>
               <p className="upsilon-description">
-                Description: A giant planet composed mainly of gas, it has no
-                solid surface.
+                <Typing
+                  line={
+                    'Description: A giant planet composed mainly of gas, it has no solid surface.'
+                  }
+                  typeSpeed={60}
+                />
               </p>
             </div>
           </div>
