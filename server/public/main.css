@@ -151,13 +151,8 @@ body{
 .earth {
   width: 300px;
   padding: 30px 100px 30px 200px;
-
-}
-
-
   text-align: right;
   /* background: rgba(150, 150, 150, 0.5); */
-
 }
 
 .earth-title{
