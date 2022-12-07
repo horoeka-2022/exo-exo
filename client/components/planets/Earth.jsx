@@ -24,12 +24,15 @@ export default function Earth({ position, args }) {
         <Html distanceFactor={5} position={[0, 1.8, 0]}>
           <div className="card earth">
             <div className="flexText">
-              <h2 className="earth-title">Name: Earth</h2>
+              <h2 className="earth-title">
+                <Typing line={'Name: Earth'} typeSpeed={50} />
+              </h2>
               <p className="earth-description">
                 <Typing
                   line={
                     'Description: Home planet. Contains liquid water. Diverse life forms.'
                   }
+                  typeSpeed={60}
                 />
               </p>
             </div>
