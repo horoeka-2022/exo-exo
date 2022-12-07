@@ -7,7 +7,7 @@ import {
   Html,
   OrbitControls,
   Stars,
-  useBounds,
+  useBounds
 } from '@react-three/drei'
 import Hud from './HUD/Hud'
 import { Physics } from '@react-three/cannon'
@@ -34,10 +34,10 @@ function MainView() {
           maxPolarAngle={Math.PI / 1.75}
           minDistance={3}
           autoRotate={true}
-          autoRotateSpeed={0.2}
+          autoRotateSpeed={0.3}
         />
-        <Stars count={20000} fade={true} />
-        {/* <ambientLight intensity={0.2} /> */}
+        <Stars count={10000} fade={true} depth={0.2} speed={0.5} factor={6} />
+        {/* <ambientLight intensity={10} /> */}
         <Suspense fallback={<Loader />}>
           {/* <Orbit position={[0, 0, -500]} /> */}
           <Bounds fit clip observe margin={1.2}>
