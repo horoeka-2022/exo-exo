@@ -1,12 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Typing from './Typing'
+import { AnimatePresence, motion } from 'framer-motion'
 
 export default function FlatHome() {
-  function handleClick() {
-    return console.log('clicked')
-  }
+  function handleClick() {}
   return (
     <>
+
       <div className="home-body">
         <div className="title-center">
           <h1 className="home-title">exo exo</h1>
@@ -22,11 +23,11 @@ export default function FlatHome() {
           </p>
         </div>
         <div className="button-center">
-          <a href="/main">
+          <Link to="/main">
             <button className="button-style" onClick={handleClick}>
               enter
             </button>
-          </a>
+          </Link>
         </div>
       </div>
     </>
