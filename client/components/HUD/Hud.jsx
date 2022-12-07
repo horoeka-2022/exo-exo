@@ -9,7 +9,6 @@ export default function HUD() {
         <div className="HUDcontainer">
           <div className="left-part information">
             <IndicatorBars />
-            <Levels />
             <div className="right-part information">
               <ul className="mission-info">
                 <li>

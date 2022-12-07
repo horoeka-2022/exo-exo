@@ -77,7 +77,6 @@ export default function IndicatorBars() {
         <li>REAR ENGINE</li>
         <li>FRONT ENGINE</li>
         <li>SHIELD</li>
-        <li>WEAPONS</li>
       </ul>
     </div>
   )
