@@ -36,8 +36,17 @@ export default function Upsilon({ position, args }) {
                   line={
                     'Description: A giant planet composed mainly of gas, it has no solid surface.'
                   }
-                  typeSpeed={60}
+                  typeSpeed={100}
                 />
+                <p className="cancri-description">
+                  <Typing
+                    line={'Distance from Earth: 44 light years.'}
+                    typeSpeed={150}
+                  />
+                </p>
+                <p className="cancri-description">
+                  <Typing line={'Temperature: 5939.85 °C'} typeSpeed={220} />
+                </p>
               </p>
             </div>
           </div>
