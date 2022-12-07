@@ -32,7 +32,7 @@ function MainView() {
           makeDefault
           minPolarAngle={0}
           maxPolarAngle={Math.PI / 1.75}
-          minDistance={2}
+          minDistance={3}
           autoRotate={true}
           autoRotateSpeed={0.2}
         />
@@ -110,10 +110,7 @@ function SelectToZoom({ children }) {
 function Loader() {
   return (
     <Html center>
-      <p className="home-type">
-        loading...
-        {/* <Typing line={'loading...'} typeSpeed={1} /> */}
-      </p>
+      <p className="home-type">loading...</p>
     </Html>
   )
 }

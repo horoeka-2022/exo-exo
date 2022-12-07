@@ -62,25 +62,34 @@ body{
 }
 
 .kepler {
-  width: 900px;
+  width: 100%;
   text-align: right;
-  padding: 50px 300px 40px 300px;
+  padding: 50px 180px 40px 300px;
+}
+
+.kepler-title{
+  font-size: 6rem;
+  font-weight: 200;
+}
+
+.kepler-description {
+  font-size: 4rem;
 }
 
 .upsilon {
-  width: 5000px;
+  width: 160%;
   text-align: right;
-  padding: 200px 1000px 500px 3000px;
-  box-shadow: 100px 100px 100px rgba(82, 198, 61, 0.9);
+  padding: 200px 1000px 500px 3200px;
+  box-shadow: 300px 300px 300px rgba(82, 198, 61, 0.9);
 }
 
 .upsilon-title{
-  font-size: 35rem;
+  font-size: 80rem;
   font-weight: 200;
 }
 
 .upsilon-description {
-  font-size: 20rem;
+  font-size: 55rem;
 }
 
 .HD33b {
@@ -100,24 +109,24 @@ body{
 }
 
 .cancri {
-  width: 700px;
+  width: 110%;
   text-align: right;
-  padding: 50px 200px 40px 400px;
+  padding: 50px 160px 40px 300px;
   box-shadow: 20px 20px 20px rgba(82, 198, 61, 0.9);
 }
 
 .cancri-title{
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: 200;
 }
 
 .cancri-description {
-  font-size: 3.5rem;
+  font-size: 4rem;
 }
 
 .HD606b {
-  width: 140px;
-  padding: 10px 30px 10px 30px;
+  width: 140%;
+  padding: 10px 30px 10px 60px;
   text-align: right;
   box-shadow: 10px 10px 10px rgba(82, 198, 61, 0.9);
 
@@ -125,16 +134,16 @@ body{
 }
 
 .HD606b-title{
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: 200;
 }
 
 .HD606b-description {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .earth {
-  width: 300px;
+  width: 110%;
   padding: 30px 100px 30px 130px;
   text-align: right;
   /* background: rgba(150, 150, 150, 0.5); */
@@ -142,13 +151,13 @@ body{
 }
 
 .earth-title{
-  font-size: 3rem;
+  font-size: 3.3rem;
   font-weight: 200;
   color: rgb(122, 203, 0);
 }
 
 .earth-description {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: rgb(122, 203, 0);
 }
 
