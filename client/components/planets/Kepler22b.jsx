@@ -5,8 +5,10 @@ import cloud from '../../../server/public/textures/clouds-texture-png.png'
 import { useFrame, useLoader } from '@react-three/fiber'
 import * as THREE from 'three'
 import { Html } from '@react-three/drei'
+import data from '../../data'
+import HUD from '../HUD/Hud'
 
-export default function Earth({ position, args }) {
+export default function kepler({ position, args }) {
   const [colorMap, cloudsMap] = useLoader(TextureLoader, [Kepler22bMap, cloud])
   const KeplerRef = useRef()
   const cloudRef = useRef()
@@ -35,6 +37,14 @@ export default function Earth({ position, args }) {
         </Html>
       )
   }
+
+  // function displayHUD() {
+  //   // setID(() => 3)
+  //   // const planetData = data.filter((e) => e.id == 3)
+  //   // setInfo(() => planetData)
+  //   if (active === true)
+  // }
+
   return (
     <>
       <ambientLight intensity={0.4} />
@@ -47,10 +57,10 @@ export default function Earth({ position, args }) {
       <mesh
         ref={cloudRef}
         position={position}
-        onPointerOver={() => setActive(true)}
-        onPointerOut={() => setActive(false)}
+        onClick={() => setActive(!active)}
       >
         {displayCard()}
+        {/* {displayHUD()} */}
 
         <sphereGeometry args={[2.412, 32, 32]} />
         <meshPhongMaterial

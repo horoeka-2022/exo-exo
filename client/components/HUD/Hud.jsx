@@ -1,6 +1,7 @@
 import React from 'react'
 import IndicatorBars from './IndicatorBars'
 import Levels from './Levels'
+import HUDState from '../HUDState'
 
 export default function HUD() {
   return (
@@ -9,7 +10,7 @@ export default function HUD() {
         <div className="HUDcontainer">
           <div className="left-part information">
             <IndicatorBars />
-            <Levels />
+            {/* <Levels /> */}
             <div className="right-part information">
               <ul className="mission-info">
                 <li>

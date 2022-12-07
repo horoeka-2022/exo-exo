@@ -1,6 +1,7 @@
-import React, { Suspense, useRef } from 'react'
+import React, { Suspense, useRef, useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Music from './Sound'
+import HUDState from './HUDState'
 
 import { Canvas } from '@react-three/fiber'
 import {
@@ -9,7 +10,7 @@ import {
   Loader,
   OrbitControls,
   Stars,
-  useBounds
+  useBounds,
 } from '@react-three/drei'
 import Hud from './HUD/Hud'
 import { Physics } from '@react-three/cannon'
@@ -36,9 +37,13 @@ import Planet11 from './planets/Planet11'
 import Planet12 from './planets/Planet12'
 
 function App() {
+  const [id, setID] = useState(0)
+  const [info, setInfo] = useState({})
+
   return (
     <>
-      <Hud />
+      {/* <HUDState /> */}
+      <Hud id={id} info={info} />
       <Canvas camera={{ position: [0, -10, 80], fov: 50 }} dpr={[1, 2]}>
         <spotLight position={[10, 10, 10]} angle={0.3} />
         <OrbitControls
@@ -83,8 +88,9 @@ function App() {
                   position={[18, 15, -25]}
                   args={[2.4, 32, 32]}
                   rotation={[1, 1, 0]}
+                  setID={setID}
+                  setInfo={setInfo}
                 />
-
                 {/* 
                 <Planet1
                 position={[10, 0, -300]}

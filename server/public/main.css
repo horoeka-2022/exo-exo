@@ -19,7 +19,7 @@ body{
   width: 100vw;
   background-color: black;
 }
-
+/* 
 .planet-info{
   color: rgba(82, 198, 61, 0.9);
   display: flex;
@@ -28,7 +28,7 @@ body{
   font-family: 'VT323', monospace;
   font-size: 40px;
   margin-bottom: .5em;
-}
+} */
 .card {
   /* z-index: 10; */
   /* display: flex; */
@@ -315,7 +315,7 @@ ul.levels li {
   overflow: hidden;
   font-size: 30px;
 }
-
+1201px and more — Extra large screens, TV.
 ul.levels li .charge {
   position: absolute;
   width: 100%;

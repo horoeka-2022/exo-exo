@@ -1,4 +1,5 @@
 import React from 'react'
+import data from '../../data'
 
 export default function Levels() {
   return (
@@ -6,7 +7,7 @@ export default function Levels() {
       <li>
         <div className="charge charge-1"></div>
         <div className="li-content">
-          <div>OXYGEN</div>
+          <div></div>
           <div className="cube">
             <div className="dot"></div>
           </div>
