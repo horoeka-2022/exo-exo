@@ -75,9 +75,9 @@ export default function IndicatorBars() {
       <ul>
         <li>POWER</li>
         <li>ENGINES</li>
-        {/* <li>FRONT ENGINE</li> */}
+        <li>FRONT ENGINE</li>
         <li>SHIELD</li>
-        <li>WEAPONS</li>
+        {/* <li>WEAPONS</li> */}
       </ul>
     </div>
   )

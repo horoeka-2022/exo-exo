@@ -21,15 +21,16 @@ export default function Earth({ position, args }) {
   function displayCard() {
     if (active === true)
       return (
-        <Html distanceFactor={5} position={[0, 2, 0]}>
+        <Html distanceFactor={5}>
           <div className="card earth">
             <div className="flexText">
               <h2 className="earth-title">Name: Earth</h2>
               <p className="earth-description">
-                <Typing
-                  line={
-                    'Description: Home planet. Contains liquid water. Diverse life forms.'
-                  }
+                {/* <Typing
+                  line={ */}
+                'Description: Home planet. Contains liquid water. Diverse life
+                forms.'
+                {/* } */}
                 />
               </p>
             </div>

@@ -28,7 +28,7 @@ body{
   display: flex;
   flex-direction: column;
   width: fit-content;
-  font-family: 'VT323', monospace;
+  font-family: 'Rajdhani', sans-serif;
   font-size: 40px;
   margin-bottom: .5em;
 }
@@ -69,6 +69,7 @@ body{
 }
 
 .upsilon {
+  font: 16px;
   width: 5000px;
   text-align: right;
   padding: 200px 1000px 500px 3000px;
@@ -76,12 +77,12 @@ body{
 }
 
 .upsilon-title{
-  font-size: 35rem;
-  font-weight: 200;
+  /* font-size: 35rem;
+  font-weight: 200; */
 }
 
 .upsilon-description {
-  font-size: 20rem;
+  /* font-size: 20rem; */
 }
 
 .HD33b {
@@ -275,6 +276,7 @@ canvas {
   height: 120px;
   margin: 10px;
   padding: 0;
+  opacity: 85%;
 }
 
 .indicator-bars ul li {

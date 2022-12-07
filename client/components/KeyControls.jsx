@@ -6,7 +6,7 @@ export default function Controls() {
   document.addEventListener('keydown', onDocumentKeyDown, false)
 
   function onDocumentKeyDown(event) {
-    const delta = 3
+    const delta = 50
     event = event || window.event
     const keycode = event.keyCode
 

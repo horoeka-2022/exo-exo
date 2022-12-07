@@ -2,7 +2,7 @@
   "id": 1,
   "Name":"Earth",
   "Description":"Earth is the third planet from the Sun and the only astronomical object known to harbor life.",
-  "Habitable":"Yes.",
+  "Habitable":"YES",
   "Atmosphere":"Nitrogen, Oxygen, Argon, Carbon Dioxide, Water Vapour.",
   "Temperature": "−89.2 - 56.7 °C",
   "Radius": "6371 km"
@@ -12,7 +12,7 @@
   "Name": "55 Cancri e",
   "Description": "Molten surface planet with sparkling silicate skies. Approximately 8 times heavier than Earth.",
   "Distance from Earth": "40 light-years.",
-  "Habitable":"No",
+  "Habitable":"NO",
   "Atmosphere":"Carbon, Nitrogen, Oxygen.",
   "Temperature": "2700 °C",
   "Radius":"1.875 x Earth"
@@ -22,7 +22,7 @@
   "Name":"Kepler 22b",
   "Description":"Super-Earth, thought to be an ocean-like planet.",
   "Distance from Earth":"635 Light-years.",
-  "Habitable":"Maybe.",
+  "Habitable":"UNKNOWN",
   "Atmosphere":"Volatile composition with a liquid or gaseous outer shell.",
   "Temperature":"15.5 °C",
   "Radius":"2.4 x Earth"
@@ -32,7 +32,7 @@
   "Name":"Upsilon Andromedae b",
   "Description":"A giant planet composed mainly of gas, it has no solid surface.",
   "Distance from Earth":"44 light years.",
-  "Habitable?":"No.",
+  "Habitable":"NO",
   "Atmosphere":"Clouds of Silicates and Iron.",
   "Temperature": "5939.85 °C",
   "Radius": "20.4 x Earth"
@@ -53,10 +53,81 @@
   "Name":"HD 189733 b",
   "Description":"Cobalt blue blow-torched atmosphere containing clouds laced with glass. Winds up to 8690 km/h.",
   "Distance from Earth":"64 light-years.",
-  "Habitable?":"No.",
+  "Habitable":"NO",
   "Atmosphere":"Sodium, Potassium, Carbon Dioxide.",
   "Temperature":"935.85 °C",
   "Radius":"12.54 x Earth"
+}
+{
+  "id": 7,
+  "Name":"K2-3d",
+  "Description":"Liquid water may exist on the surface but one side facing towards its star in scorching heat, and the opposite side in bitter darkness",
+  "Habitable?":"NO",
+  "Atmosphere":"Hydrogen, Helium.",
+  "Temperature": "9 °C",
+  "Distance from Earth": "157 light-years.",
+  "Radius":"1.6 x Earth"
+},
+{
+  "id": 8,
+  "Name":"Kelpler-442b",
+  "Description":"Likely rocky but surface gravity on Kepler-442b would be 30% stronger than Earth.",
+  "Habitable":"UNKNOWN",
+  "Atmosphere":"UNKNOWN",
+  "Temperature": "-40 °C",
+  "Distance from Earth": "1063 light-years.",
+  "Radius":"1.34 x Earth"
+},
+{
+  "id": 9,
+  "Name":"GJ 667 C f",
+  "Description":"UNKNOWN",
+  "Habitable":"UNKNOWN",
+  "Atmosphere":"UNKNOWN",
+  "Temperature": "3190 °C",
+  "Distance from Earth": "24 light-years.",
+  "Radius":"1.45 x Earth"
+},,
+{
+  "id": 10,
+  "Name":"Gliese 832 c",
+  "Description":"Fifth-closest known potentially habitable exoplanet to Earth.",
+  "Habitable":"MAYBE",
+  "Atmosphere":"UNKNOWN",
+  "Temperature": "-20 °C",
+  "Distance from Earth": "16 light-years.",
+  "Radius":"0.3 x Earth"
+},
+{
+  "id": 11,
+  "Name":"Kapteyn b",
+  "Description":"Liquid water may exist on the surface of the planet.",
+  "Habitable":"NO",
+  "Atmosphere":"UNKNOWN",
+  "Temperature": "-68 °C",
+  "Distance from Earth": "13 light-years.",
+  "Radius":"4.8 x Earth"
+},
+{
+  "id": 12,
+  "Name":"Kepler-452b",
+  "Description":"Likely active volcanoes, wih thick and mist clouds",
+  "Habitable":"UNKNOWN",
+  "Atmosphere":"Methane, Carbon Dioxide.",
+  "Temperature": "-8 °C",
+  "Distance from Earth": "1,402 light-years.",
+  "Radius":"1.5 x Earth"
+},
+
+{
+  "id": 13,
+  "Name":"Kepler-298 d",
+  "Description":"Likely an ocean planet with a thick gas atmosphere.",
+  "Habitable?":"NO",
+  "Atmosphere":"UNKNOWN",
+  "Temperature": "4190 °C",
+  "Distance from Earth": "1,546 light-years.",
+  "Radius":"2.5 x Earth"
 }]
 
 

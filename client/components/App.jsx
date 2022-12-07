@@ -9,6 +9,7 @@ import {
   ContactShadows,
   Loader,
   OrbitControls,
+  Sparkles,
   Stars,
   useBounds,
 } from '@react-three/drei'
@@ -43,9 +44,9 @@ function App() {
       <Music autoLoad={true} />
       <Hud />
 
-      {/* <div style={{ width: '800px', height: '1200px' }}> */}
-      <Canvas dpr={[1, 2]} camera={{ position: [0, -10, 80], fov: 50 }}>
-        <Orbit position={[-90, 30, -50]} />
+      <Canvas>
+        {/* <Sparkles count={100} size={100} opacity={50} /> */}
+        {/* <Orbit position={[-90, 30, -50]} /> */}
         {/* <Canvas camera={{ position: [20, 80, 10], fov: 30 }} dpr={[1, 2]}>  */}
         {/* <spotLight position={[10, 15, 10]} angle={0.3} /> */}
 
@@ -61,7 +62,9 @@ function App() {
         /> */}
         <CameraControls />
         <KeyControls />
-        <Stars count={10000} fade={true} radius={500} />
+        {/* <div style={{ width: '800px', height: '1200px' }}> */}
+        <Stars count={10000} fade={true} radius={500} depth={100} speed={2} />
+
         <ambientLight intensity={0.2} />
         <Suspense fallback={null}>
           <Bounds fit clip observe damping={6} margin={1.2}>
@@ -78,6 +81,7 @@ function App() {
                   args={[0.3, 32, 32]}
                   rotation={[1, 0, -1]}
                 />
+                {/* <Scene /> */}
                 <HD189733b
                   position={[-20, 95, -100]}
                   args={[7, 32, 32]}
@@ -90,13 +94,13 @@ function App() {
                 />
                 <Upsilon
                   position={[-100, -40, -50]}
-                  args={[15, 32, 32]}
+                  args={[30, 32, 32]}
                   rotation={[1, 0, 0]}
                 />
 
                 <Planet1
                   position={[10, 0, -300]}
-                  args={[28, 32, 32]}
+                  args={[40, 32, 32]}
                   rotation={[0, 5, 5]}
                 />
                 <Planet2 position={[7, -160, 150]} args={[1.2, 32, 32]} />
@@ -113,6 +117,7 @@ function App() {
               </Physics>
             </SelectToZoom>
           </Bounds>
+
           <ContactShadows
             rotateX={Math.PI / 2}
             position={[0, -35, 0]}
