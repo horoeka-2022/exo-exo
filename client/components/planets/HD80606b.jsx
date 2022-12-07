@@ -31,9 +31,12 @@ export default function HD80606b({ position, args }) {
         <Html distanceFactor={5} position={[0, 0.8, 0]}>
           <div className="card HD606b">
             <div className="flexText">
-              <h2 className="HD606b-title">Name: HD80606b</h2>
-              <p className="HD606b-description"><Typing line={'Description: lil Gas Giant'}/>
-                </p>
+              <h2 className="HD606b-title">
+                <Typing line={'Name: HD80606b'} typeSpeed={50} />
+              </h2>
+              <p className="HD606b-description">
+                <Typing line={'Description: lil Gas Giant'} typeSpeed={60} />
+              </p>
             </div>
           </div>
         </Html>
