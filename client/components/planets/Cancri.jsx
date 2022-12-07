@@ -21,12 +21,15 @@ export default function Cancri({ position, args }) {
         <Html distanceFactor={5} position={[0, 3.5, 0]}>
           <div className="card cancri">
             <div className="flexText">
-              <h2 className="cancri-title">Name: 55 Cancri e</h2>
+              <h2 className="cancri-title">
+                <Typing line={'Name: 55 Cancri e'} typeSpeed={50} />
+              </h2>
               <p className="cancri-description">
                 <Typing
                   line={
                     'Description: A molten surface planet with sparkling silicate skies.'
                   }
+                  typeSpeed={60}
                 />
               </p>
             </div>

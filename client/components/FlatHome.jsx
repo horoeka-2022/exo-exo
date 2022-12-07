@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Typing from './Typing'
-import { AnimatePresence, motion } from 'framer-motion'
 
 export default function FlatHome() {
   function handleClick() {}

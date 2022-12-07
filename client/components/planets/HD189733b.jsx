@@ -27,7 +27,7 @@ export default function HD33b({ position, args }) {
           <div className="card HD33b">
             <div className="flexText">
               <h2 className="HD33b-title">
-                <Typing line={'Name: HD 189733 b'} typeSpeed={40} />
+                <Typing line={'Name: HD 189733 b'} typeSpeed={50} />
               </h2>
               <p className="HD33b-description">
                 <Typing line={'Description: Gas Giant'} typeSpeed={60} />
