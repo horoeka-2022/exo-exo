@@ -497,7 +497,7 @@ ul.levels li .li-content div {
   position: absolute;
   width: 90%;
   padding: 10px 10px 10px 5px;
-  border: 1px solid rgba(82, 198, 61, 0.9);
+  border: 10px solid rgba(82, 198, 61, 0.9);
   text-shadow: 0 0 4px rgba(83, 148, 72, 0.9);
   font-size: 30px;
   z-index: 1;
@@ -520,5 +520,220 @@ ul.levels li .li-content div {
   } */
   .angle {
     border-left-width: 1px;
+  }
+}
+
+/* Extra small devices (phones, 960px and down) */
+@media screen and (max-width: 960px) {
+  .HUDBody {
+    box-sizing: border-box;
+    padding: 10px;
+    background: black;
+    color: rgba(82, 198, 61, 0.9);
+    font-family: "Exo", sans-serif;
+  }
+  
+  .HUDBody ul li{
+    list-style: none;
+  }
+  
+  .HUDcontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+  }
+  
+  .information {
+    perspective: 800px;
+    transform-style: preserve-3d;
+    will-change: transform;
+  }
+  
+  .indicator-bars {
+    display: flex;
+    align-items: center;
+  }
+  
+  .indicator-bars .indicator-bar {
+    position: relative;
+    border: 1px solid rgba(82, 198, 61, 0.9);
+    overflow: hidden;
+  }
+  
+  .indicator-bars .indicator-bar .bar {
+    transform: translateY(calc(100% + 2px));
+    will-change: transform;
+  
+    animation: vertical-inner-bar-appear 25s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(10, end);
+  }
+  
+  .indicator-bars .bar .inner-bar {
+    width: 20px;
+    height: 4px;
+    margin: 2px;
+    background: rgba(82, 198, 61, 0.9);
+    z-index: 1;
+  }
+  
+  .indicator-bars .indicator-bars .bar-1 {animation-delay: 8s}
+  .indicator-bars .indicator-bars .bar-2 {animation-delay: 0s}
+  .indicator-bars .indicator-bars .bar-3 {animation-delay: 2s}
+  .indicator-bars .indicator-bars .bar-4 {animation-delay: 5s}
+  .indicator-bars .indicator-bars .bar-5 {animation-delay: 17s}
+  
+  
+  .indicator-bars ul {
+    height: 50px;
+    margin: 5px;
+    padding: 0;
+  }
+  
+  .indicator-bars ul li {
+    list-style: none;
+    color: rgba(82, 198, 61, 0.9);
+    font-size: 13px;
+    text-shadow: 0 0 4px rgba(59, 157, 42, 0.9);
+    opacity: 0.7;
+    will-change: opacity;
+  
+    animation: steps-animated 0s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+  }
+  
+  .indicator-bars ul li:nth-child(1) {animation-delay: 33s}
+  .indicator-bars ul li:nth-child(2) {animation-delay: 25s}
+  .indicator-bars ul li:nth-child(3) {animation-delay: 27s}
+  .indicator-bars ul li:nth-child(4) {animation-delay: 30s}
+  .indicator-bars ul li:nth-child(5) {animation-delay: 42s}
+  
+  @keyframes steps-animated
+  {
+      100% {opacity: 1;}
+  }
+  @keyframes vertical-inner-bar-appear
+  {
+      100% {transform: translateY(0%)}
+  }
+  
+  /* ul.levels {
+    padding: 0;
+  }
+  
+  ul.levels li {
+    position: relative;
+    margin: 10px 0;
+    width: 400px;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid rgba(82, 198, 61, 0.9);
+    color: white;
+    text-shadow: 0 0 0 transparent;
+    overflow: hidden;
+    font-size: 30px;
+  }
+  
+  ul.levels li .charge {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    opacity: 0.7;
+    will-change: transform;
+    transform-origin: -10px;
+    background: rgba(82, 198, 61, 0.9);
+  
+    animation-name: gaz-level-show;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+  }
+  
+  ul.levels li .charge-1 { transform: scaleX(0.8) translateY(-15px) translateX(-10px); animation-duration: 266s;}
+  ul.levels li .charge-2 { transform: scaleX(0) translateY(-15px) translateX(-10px);   animation-duration: 193s;}
+  ul.levels li .charge-3 { transform: scaleX(0.2) translateY(-15px) translateX(-10px); animation-duration: 277s;}
+  ul.levels li .charge-4 { transform: scaleX(0.1) translateY(-15px) translateX(-10px); animation-duration: 119s;}
+  ul.levels li .charge-5 { transform: scaleX(0.6) translateY(-15px) translateX(-10px); animation-duration: 180s;}
+  
+  
+  ul.levels li .li-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  ul.levels li .li-content div {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .levels-information {
+    width: 600x;
+    height: 100px;
+    margin-top: 40px;
+    text-align: center;
+    text-shadow: 0 0 4px rgba(82, 198, 61, 0.9);
+    font-size: 28px;
+    opacity: 0;
+    will-change: opacity;
+  }
+  
+  @keyframes gaz-level-show
+  {
+      10% {   transform: scaleX(0.6) translateY(-15px) translateX(-10px)}
+      20% {   transform: scaleX(0.2) translateY(-15px) translateX(-10px)}
+      40% {   transform: scaleX(0.5) translateY(-15px) translateX(-10px)}
+      80% {   transform: scaleX(0.8) translateY(-15px) translateX(-10px)}
+      90% {   transform: scaleX(0.3) translateY(-15px) translateX(-10px)}
+      100% {  transform: scaleX(0.6) translateY(-15px) translateX(-10px)}
+  } */
+  .right-part {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .right-part ul {
+    position: absolute;
+    width: 90%;
+    padding: 5px 5px 5px 5px;
+    border: 1px solid rgba(82, 198, 61, 0.9);
+    text-shadow: 0 0 4px rgba(83, 148, 72, 0.9);
+    font-size: 15px;
+  }
+  
+  .right-part ul li {
+    padding: 10px 10px 0px 5px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+  
+  .right-part ul {
+    position: absolute;
+    width: 90%;
+    padding: 5px 10px 10px 5px;
+    border: 1px solid rgba(82, 198, 61, 0.9);
+    text-shadow: 0 0 4px rgba(83, 148, 72, 0.9);
+    font-size: 30px;
+  }
+  
+  .right-part ul li {
+    padding: 10px 10px 0px 5px;
+  }
+
+  .mission-info {
+    margin-top: 10px;
   }
 }
