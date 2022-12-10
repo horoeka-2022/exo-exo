@@ -68,7 +68,7 @@ export default function Upsilon({ position, args }) {
       >
         {displayCard()}
 
-        <sphereGeometry args={[20.1, 32, 32]} />
+        <sphereGeometry args={[5.1, 32, 32]} />
         <meshPhongMaterial
           map={cloudMap}
           opacity={0.5}

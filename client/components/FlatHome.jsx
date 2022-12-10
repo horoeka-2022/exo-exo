@@ -15,9 +15,11 @@ export default function FlatHome() {
             <div className="home-div">
               <Typewriter
                 words={[
-                  'An exoplanet is any planet beyond our solar system.',
-                  'Some are more habitable than others...',
-                  'Enter to discover more worlds.',
+                  'I am part of the universe',
+                  'And the universe is part of me',
+                  'For I am crafted from stardust',
+                  'From the cosmos and beyond',
+                  '-  "I am Part of the Universe" by Clive Blake',
                 ]}
                 typeSpeed={50}
                 deleteSpeed={20}
@@ -34,7 +36,7 @@ export default function FlatHome() {
         <div className="button-center">
           <Link to="/main">
             <button className="button-style" onClick={handleClick}>
-              enter
+              enter to discover new worlds
             </button>
           </Link>
         </div>

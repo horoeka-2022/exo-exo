@@ -4,7 +4,7 @@ import HD33bMap from '../../../server/public/textures/HD189733b.webp'
 import HD33bAtmos from '../../../server/public/textures/8k_earth_clouds.png'
 import { useFrame, useLoader } from '@react-three/fiber'
 import * as THREE from 'three'
-import { Html } from '@react-three/drei'
+import { Html, Cloud } from '@react-three/drei'
 import Typing from '../Typing'
 
 export default function HD33b({ position, args }) {
@@ -62,7 +62,7 @@ export default function HD33b({ position, args }) {
         onPointerOut={() => setActive(false)}
       >
         {displayCard()}
-        <sphereGeometry args={[7.035, 32, 32]} />
+        <sphereGeometry args={[1.9, 32, 32]} />
         <meshPhongMaterial
           map={cloudsMap}
           opacity={0.3}
@@ -72,6 +72,13 @@ export default function HD33b({ position, args }) {
         />
       </mesh>
       <mesh ref={earthRef} position={position}>
+        <Cloud
+          opacity={0.007}
+          speed={0.1} // Rotation speed
+          width={0.5} // Width of the full cloud
+          depth={1} // Z-dir depth
+          segments={50} // Number of particles
+        />
         <sphereGeometry args={args} />
         <meshStandardMaterial map={colorMap} />
       </mesh>

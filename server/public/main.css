@@ -11,7 +11,9 @@ body{
   margin: 0;
   padding: 0;
   position: fixed;
-  color: rgba(82, 198, 61, 0.9);}
+  color: rgba(43, 136, 26, 0.823);
+  font-family: 'Rajdhani', sans-serif;
+}
 
 .canvas {
   height: 100vh;
@@ -20,9 +22,9 @@ body{
 }
 
 .planet-info{
-  color: rgba(82, 198, 61, 0.9);
+  color: rgba(43, 136, 26, 0.823);
   display: flex;
-  font-family: 'VT323', monospace;
+  font-family: 'Rajdhani', sans-serif;
   font-size: 40px;
   padding: 10rem;
   text-align: center;
@@ -39,10 +41,10 @@ body{
   grid-template-rows: 300px 250px 250px;
   grid-template-areas: 'image' 'text'; */
   background: rgba(0, 0, 0, 0.1);
-  box-shadow: 15px 15px 15px rgba(82, 198, 61, 0.9);
-  font-family: 'VT323', monospace; 
+  box-shadow: 15px 15px 15px rgba(43, 136, 26, 0.823);
+  font-family: 'Rajdhani', sans-serif;
   /* text-align: center; */
-  color: rgba(82, 198, 61, 0.9);
+  color: rgba(43, 136, 26, 0.823);
   font-size: auto;
   font-weight: 200;
 }
@@ -80,7 +82,7 @@ body{
   width: 160%;
   text-align: right;
   padding: 200px 1000px 500px 3200px;
-  box-shadow: 300px 300px 300px rgba(82, 198, 61, 0.9);
+  box-shadow: 300px 300px 300px rgba(43, 136, 26, 0.823);
 }
 
 .upsilon-title{
@@ -96,7 +98,7 @@ body{
   width: 1800px;
   padding: 100px 900px 100px 1300px;
   text-align: right;
-  box-shadow: 60px 60px 60px rgba(82, 198, 61, 0.9);
+  box-shadow: 60px 60px 60px rgba(43, 136, 26, 0.823);
 }
 
 .HD33b-title{
@@ -112,7 +114,7 @@ body{
   width: 110%;
   text-align: right;
   padding: 50px 160px 40px 300px;
-  box-shadow: 20px 20px 20px rgba(82, 198, 61, 0.9);
+  box-shadow: 20px 20px 20px rgba(43, 136, 26, 0.823);
 }
 
 .cancri-title{
@@ -130,7 +132,7 @@ body{
   padding: 10px 30px 10px 80px;
 
   text-align: right;
-  box-shadow: 10px 10px 10px rgba(82, 198, 61, 0.9);
+  box-shadow: 10px 10px 10px rgba(43, 136, 26, 0.823);
 
 
 }
@@ -171,7 +173,7 @@ body{
   font-size: 2rem;
   position: relative;
     font-family: 'Space Quest', sans-serif;
-    font-size: 11em;
+    font-size: 8em;
     color: rgb(203, 255, 124);
     animation: animate 1s ease-in-out infinite alternate;
     padding: 6rem;
@@ -224,8 +226,8 @@ body{
 }
 
 .home-type{
-  color:  rgb(153, 255, 0);
-  font-family: 'VT323', monospace;
+  color:  rgb(150, 234, 23);
+  font-family: 'Rajdhani', sans-serif;
   font-size:2.7em;
   padding: 100px 450px;
   text-align: center;
@@ -234,7 +236,7 @@ body{
 .home-div{
   background-color: rgb(214, 214, 214, 0.4);
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .button-center {
@@ -253,10 +255,10 @@ body{
   color: rgb(203, 255, 124);
   background-color: transparent;
   text-decoration: none;
-  font-size: 4em;
+  font-size: 2em;
   padding: 20px 60px;
   transition: 0.3s;
-  font-family: 'Space Quest', sans-serif;  
+  font-family: 'Rajdhani', sans-serif; 
   letter-spacing: 0.10em;
 }
 
@@ -334,8 +336,8 @@ canvas {
   box-sizing: border-box;
   padding: 10px;
   background: black;
-  color: rgba(82, 198, 61, 0.9);
-  font-family: 'VT323', monospace; 
+  color: rgba(43, 136, 26, 0.823);
+  font-family: 'Rajdhani', sans-serif;
 }
 
 .HUDBody ul li{
@@ -362,7 +364,7 @@ canvas {
 
 .indicator-bars .indicator-bar {
   position: relative;
-  border: 1px solid rgba(82, 198, 61, 0.9);
+  border: 1px solid rgba(43, 136, 26, 0.823);
   overflow: hidden;
 }
 
@@ -380,7 +382,7 @@ canvas {
   width: 44px;
   height: 12px;
   margin: 4px;
-  background: rgba(82, 198, 61, 0.9);
+  background: rgba(43, 136, 26, 0.823);
   z-index: 1;
 }
 
@@ -399,12 +401,12 @@ canvas {
 
 .indicator-bars ul li {
   list-style: none;
-  color: rgba(82, 198, 61, 0.9);
+  color: rgba(43, 136, 26, 0.823);
   font-size: 40px;
   text-shadow: 0 0 4px rgba(59, 157, 42, 0.9);
   opacity: 0.7;
   will-change: opacity;
-  font-family: 'VT323', monospace; 
+  font-family: 'Rajdhani', sans-serif;
 
   animation: steps-animated 0s;
     animation-fill-mode: forwards;
@@ -436,12 +438,12 @@ ul.levels li {
   width: 400px;
   height: 50px;
   padding: 10px;
-  border: 1px solid rgba(82, 198, 61, 0.9);
+  border: 1px solid rgba(43, 136, 26, 0.823);
   color: white;
   text-shadow: 0 0 0 transparent;
   overflow: hidden;
   font-size: 30px;
-  font-family: 'VT323', monospace; 
+  font-family: 'Rajdhani', sans-serif;
 }
 
 ul.levels li .charge {
@@ -451,7 +453,7 @@ ul.levels li .charge {
   opacity: 0.7;
   will-change: transform;
   transform-origin: -10px;
-  background: rgba(82, 198, 61, 0.9);
+  background: rgba(43, 136, 26, 0.823);
 
   animation-name: gaz-level-show;
     animation-iteration-count: infinite;
@@ -481,11 +483,11 @@ ul.levels li .li-content div {
   height: 100px;
   margin-top: 40px;
   text-align: center;
-  text-shadow: 0 0 4px rgba(82, 198, 61, 0.9);
+  text-shadow: 0 0 4px rgba(43, 136, 26, 0.823);
   font-size: 28px;
   opacity: 0;
   will-change: opacity;
-  font-family: 'VT323', monospace; 
+  font-family: 'Rajdhani', sans-serif;
 }
 
 @keyframes gaz-level-show
@@ -506,12 +508,12 @@ ul.levels li .li-content div {
   position: absolute;
   width: 90%;
   padding: 10px 10px 10px 5px;
-  border: 10px solid rgba(82, 198, 61, 0.9);
+  border: 10px solid rgba(43, 136, 26, 0.823);
   text-shadow: 0 0 4px rgba(83, 148, 72, 0.9);
   font-size: 50px;
   z-index: 1;
   opacity: 1;
-  font-family: 'VT323', monospace; 
+  font-family: 'Rajdhani', sans-serif;
 }
 
 .right-part ul li {
@@ -539,8 +541,8 @@ ul.levels li .li-content div {
     box-sizing: border-box;
     padding: 10px;
     background: black;
-    color: rgba(82, 198, 61, 0.9);
-    font-family: "Exo", sans-serif;
+    color: rgba(43, 136, 26, 0.823);
+    font-family: 'Rajdhani', sans-serif;
   }
   
   .HUDBody ul li{
@@ -567,7 +569,7 @@ ul.levels li .li-content div {
   
   .indicator-bars .indicator-bar {
     position: relative;
-    border: 1px solid rgba(82, 198, 61, 0.9);
+    border: 1px solid rgba(43, 136, 26, 0.823);
     overflow: hidden;
   }
   
@@ -585,7 +587,7 @@ ul.levels li .li-content div {
     width: 20px;
     height: 4px;
     margin: 2px;
-    background: rgba(82, 198, 61, 0.9);
+    background: rgba(43, 136, 26, 0.823);
     z-index: 1;
   }
   
@@ -604,7 +606,7 @@ ul.levels li .li-content div {
   
   .indicator-bars ul li {
     list-style: none;
-    color: rgba(82, 198, 61, 0.9);
+    color: rgba(43, 136, 26, 0.823);
     font-size: 20px;
     text-shadow: 0 0 4px rgba(59, 157, 42, 0.9);
     opacity: 0.7;
@@ -640,7 +642,7 @@ ul.levels li .li-content div {
     width: 400px;
     height: 50px;
     padding: 10px;
-    border: 1px solid rgba(82, 198, 61, 0.9);
+    border: 1px solid rgba(43, 136, 26, 0.823);
     color: white;
     text-shadow: 0 0 0 transparent;
     overflow: hidden;
@@ -654,7 +656,7 @@ ul.levels li .li-content div {
     opacity: 0.7;
     will-change: transform;
     transform-origin: -10px;
-    background: rgba(82, 198, 61, 0.9);
+    background: rgba(43, 136, 26, 0.823);
   
     animation-name: gaz-level-show;
       animation-iteration-count: infinite;
@@ -684,7 +686,7 @@ ul.levels li .li-content div {
     height: 100px;
     margin-top: 40px;
     text-align: center;
-    text-shadow: 0 0 4px rgba(82, 198, 61, 0.9);
+    text-shadow: 0 0 4px rgba(43, 136, 26, 0.823);
     font-size: 28px;
     opacity: 0;
     will-change: opacity;
@@ -708,9 +710,10 @@ ul.levels li .li-content div {
     position: absolute;
     width: 90%;
     padding: 5px 5px 5px 5px;
-    border: 1px solid rgba(82, 198, 61, 0.9);
+    border: 1px solid rgba(43, 136, 26, 0.823);
     text-shadow: 0 0 4px rgba(83, 148, 72, 0.9);
     font-size: 15px;
+    font-family: 'Rajdhani', sans-serif;
   }
   
   .right-part ul li {
@@ -734,9 +737,10 @@ ul.levels li .li-content div {
     position: absolute;
     width: 90%;
     padding: 5px 10px 10px 5px;
-    border: 1px solid rgba(82, 198, 61, 0.9);
+    border: 1px solid rgba(43, 136, 26, 0.823);
     text-shadow: 0 0 4px rgba(83, 148, 72, 0.9);
     font-size: 40px;
+    font-family: 'Rajdhani', sans-serif;
   }
   
   .right-part ul li {
